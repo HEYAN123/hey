@@ -1,0 +1,16 @@
+{
+  "name": "hey",
+  "version": "1.0.0",
+  "description": "a component library",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.pro.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "贺妍",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.10.2"
+  }
+}
