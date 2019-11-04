@@ -1,9 +1,8 @@
 // webpack基础配置
-
 const path = require("path");
 const { HtmlWebpackPlugin } = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
 module.exports = {
     // polyfill是为了转码es6新api
@@ -53,5 +52,24 @@ module.exports = {
         ]
     },
     // 插件使用
-    
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: `Hey!`,
+            filename: "index.html",
+            template: "./templates/index.ejs"
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+        }),
+    ],
+    // webpack集成插件配置
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                name: "commons",
+                chunks: "initial",
+                minChunks: 2
+            }
+        }
+    }
 }
