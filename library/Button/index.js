@@ -1,14 +1,16 @@
 import React from 'react';
-import { Button } from '../library';
+// import Header from './components/Header';
 // import Scene from './components/Scene';
 // import Tools from './components/Tools';
 
-function App() {
+export function Button(props) {
   return (
     <div>
-      <Button>提交</Button>
+      <button>
+      {props.children}
+      </button>
     </div>
   );
 }
 
-export default App;
+export default Button;
