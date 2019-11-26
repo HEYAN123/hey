@@ -1,16 +1,16 @@
 import React from 'react';
-// import Header from './components/Header';
-// import Scene from './components/Scene';
-// import Tools from './components/Tools';
-import styles from "./button.css";
+import { ThemeProvider } from "react-jss"
+import themeData from "../theme";
+import ButtonComponent from "./Button";
 
 export function Button(props) {
+  
   return (
-    <div className={styles.button}>
-      <button>
+    <ThemeProvider theme={themeData}>
+      <ButtonComponent>
       {props.children}
-      </button>
-    </div>
+      </ButtonComponent>
+    </ThemeProvider>
   );
 }
 
