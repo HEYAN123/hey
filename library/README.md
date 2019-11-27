@@ -4,3 +4,4 @@
 
 - react-hooks
 - css-module
+- react-jss

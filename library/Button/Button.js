@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTheme } from "react-jss"
 import buttonStyle from "./buttonStyle";
 
@@ -14,6 +15,10 @@ export function ButtonComponent(props) {
       </button>
     </div>
   );
+}
+
+ButtonComponent.propTypes = {
+  children: PropTypes.node
 }
 
 export default ButtonComponent;
