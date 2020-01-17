@@ -29,6 +29,15 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.js$/,
+                loader: 'eslint-loader',
+                enforce: 'pre',
+                include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'library')],
+                options: {
+                    formatter: require('eslint-friendly-formatter')
+                }
+            },
             // 编译js或jsx文件
             {
                 test: /\.(js|jsx)$/,

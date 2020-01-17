@@ -1,8 +1,10 @@
 # Hey组件库
 
-## 像原生元素一样的组件库
+## 基于react框架的可定制前端组件库
 
 url:<https://heyan123.github.io/hey/>
+
+设计语言：Ant Design
 
 ## feature
 
@@ -14,4 +16,3 @@ url:<https://heyan123.github.io/hey/>
 ### 2. 原生属性
 
 - 完全兼容原生属性功能
-
