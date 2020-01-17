@@ -2,6 +2,6 @@
 
 // 纵向间距关系
 
-const spacing_base = 8;
-const spacing_m = 16;
-const spacing_l = 24;
+export const spacingB = 8;
+export const spacingM = 16;
+export const spacingL = 24;
