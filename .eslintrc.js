@@ -1,12 +1,17 @@
 module.exports = {
     root: true, 
-    ecmaFeatures: {
-        jsx: true
+    parserOptions: {
+        sourceType: 'module'
     },
-    ecmaVersion: 2018,
-    sourceType: "module",
     env: {
         browser: true,
-    },
-    extends: 'airbnb',
+	},
+	extends: 'airbnb',
+    rules: {
+        "indent": ["error", 2],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "no-console": "error",
+        "arrow-parens": 0
+    }
 }

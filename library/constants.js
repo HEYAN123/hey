@@ -2,7 +2,6 @@
 
 // 纵向间距关系
 
-const spacing_sm = "8px";
-const spacing_m = "16px";
-const spacing_l = "24px";
-
+const spacing_base = 8;
+const spacing_m = 16;
+const spacing_l = 24;
