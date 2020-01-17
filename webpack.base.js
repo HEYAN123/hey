@@ -10,7 +10,7 @@ module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
     // 出口
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         filename: "js/main.js"
     },
     // 模块加载
