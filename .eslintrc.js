@@ -12,6 +12,7 @@ module.exports = {
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-console": "error",
-        "arrow-parens": 0
+        "arrow-parens": 0,
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     }
 }
