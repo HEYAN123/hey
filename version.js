@@ -13,7 +13,7 @@ const MAIN = "0"; // 功能模块/整体架构发生较大改动
 // 子版本号
 const CHILD = "1"; // 功能有增加或变化
 // 阶段版本号
-const STAGE = "0"; // bug修复或小的变动
+const STAGE = "1"; // bug修复或小的变动
 // 日期版本号
 const DATE = "200119"; // 修改的日期
 
