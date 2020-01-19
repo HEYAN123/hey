@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const eslintFriendlyFormatter = require("eslint-friendly-formatter");
-// const webpack = require("webpack");
+const { VERSION } = require("./version");
 
 module.exports = {
   // polyfill是为了转码es6新api
@@ -64,7 +64,7 @@ module.exports = {
   // 插件使用
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Hey!",
+      title: `Hey ${VERSION}`,
       filename: "index.html",
       template: "./templates/index.ejs",
     }),
