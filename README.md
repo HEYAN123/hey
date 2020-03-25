@@ -2,8 +2,6 @@
 
 ## 基于react框架的可定制前端组件库
 
-url:<https://heyan123.github.io/hey/>
-
 设计语言：Ant Design
 
 ## feature

@@ -14,5 +14,7 @@ module.exports = {
         "no-console": "error",
         "arrow-parens": 0,
         "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        'import/no-named-as-default': 0,
+        'import/prefer-default-export': 0.
     }
 }
