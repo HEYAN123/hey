@@ -1,10 +1,11 @@
 {
-  "name": "hey",
+  "name": "hey-design",
   "version": "1.0.0",
   "description": "a component library",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
+    "site": "bisheng start --config ./site/bisheng.config.js",
     "build": "webpack --config webpack.pro.js",
     "lint": "eslint --ext .js src",
     "test": "npm run lint"
@@ -12,10 +13,10 @@
   "pre-commit": [
     "lint"
   ],
-  "author": "贺妍",
+  "author": "heyan123",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HEYAN123/hey.git"
+    "url": "git+https://github.com/HEYAN123/hey.git"
   },
   "license": "ISC",
   "dependencies": {
@@ -55,5 +56,16 @@
     "style-loader": "^1.0.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/HEYAN123/hey/issues"
+  },
+  "homepage": "https://heyan123.github.io/hey/",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "components",
+    "react"
+  ]
 }

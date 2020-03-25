@@ -32,11 +32,10 @@ module.exports = {
     components: "./library", // 组件路径
     docs: "./docs", // 文档路径
     changelog: ["CHANGELOG.zh-CN.md", "CHANGELOG.en-US.md"], // 修改历史
-    "components/form/v3": ["components/form/v3.zh-CN.md", "components/form/v3.en-US.md"],
-    "docs/resources": ["./docs/resources.zh-CN.md", "./docs/resources.en-US.md"],
+    // "docs/resources": ["./docs/resources.zh-CN.md", "./docs/resources.en-US.md"],
   },
   theme: "./site/theme", // 主题
-  htmlTemplate: "./site/theme/static/template.html", // 页面模板
+  htmlTemplate: "./site/theme/static/template.ejs", // 页面模板
   themeConfig: { // 主题配置
     categoryOrder: { // 目录顺序
       "Ant Design": 0,
