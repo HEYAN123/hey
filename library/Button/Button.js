@@ -1,27 +1,26 @@
 import React from "react";
+import { ThemeProvider } from "react-jss";
 import PropTypes from "prop-types";
-import { useTheme } from "react-jss";
-import buttonStyle from "./buttonStyle";
+import themeData from "../theme";
+import ButtonComponent from "./button-component";
 
-function ButtonComponent(props) {
-  const theme = useTheme();
-  const classes = buttonStyle({ theme });
+export function Button(props) {
   const { children } = props;
   return (
-    <div>
-      <button type="button" className={classes.myButton}>
+    <ThemeProvider theme={themeData}>
+      <ButtonComponent>
         {children}
-      </button>
-    </div>
+      </ButtonComponent>
+    </ThemeProvider>
   );
 }
 
-ButtonComponent.propTypes = {
+Button.propTypes = {
   children: PropTypes.node,
 };
 
-ButtonComponent.defaultProps = {
+Button.defaultProps = {
   children: "",
 };
 
-export default ButtonComponent;
+export default Button;

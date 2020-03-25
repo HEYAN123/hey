@@ -16,3 +16,8 @@ url:<https://heyan123.github.io/hey/>
 ### 2. 原生属性
 
 - 完全兼容原生属性功能
+
+## 技术使用
+
+- react
+- hooks
