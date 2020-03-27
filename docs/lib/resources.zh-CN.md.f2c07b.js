@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{411:function(e,i){e.exports={content:["article",{},["ul",["li",["p","lib文件夹用于放置与组件无关的页面文档"]]]],meta:{order:1,title:"资源",toc:!1,filename:"lib/resources.zh-CN.md"},description:["section",["p","这里汇总了与 Ant Design 相关的所有资源。"]],toc:["ul"]}}}]);
