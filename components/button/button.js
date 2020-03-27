@@ -2,15 +2,15 @@ import React from "react";
 import { ThemeProvider } from "react-jss";
 import PropTypes from "prop-types";
 import themeData from "../theme";
-import ButtonComponent from "./button-component";
+import ButtonItem from "./item";
 
 export function Button(props) {
   const { children } = props;
   return (
     <ThemeProvider theme={themeData}>
-      <ButtonComponent>
+      <ButtonItem>
         {children}
-      </ButtonComponent>
+      </ButtonItem>
     </ThemeProvider>
   );
 }

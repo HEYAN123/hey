@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html >
+<html {{ htmlAttributes | safe }}>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    
-    <link rel="Shortcut Icon" href="/icon.ico" type="image/x-icon" />
-    
+    <title>{% if title %}{{ title | safe }}{% else %}{% endif %}</title>
+    {% if meta %}{{ meta | safe }}{% endif %}
+    <link rel="Shortcut Icon" href="{{ root }}icon.ico" type="image/x-icon" />
+    {% for cssFile in manifest["css"] %}
+    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
+    {% endfor %}
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="/color.less" />
+    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -74,11 +76,11 @@
   </head>
   <body>
     <div id="react-content">
-      
+      {{ content | safe }}
     </div>
-    
-    <script src="/index.js"></script>
-    
+    {% for jsFile in manifest["js"] %}
+    <script src="{{ root }}{{ jsFile }}"></script>
+    {% endfor %}
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
     <script>

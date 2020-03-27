@@ -55,10 +55,12 @@ module.exports = {
     component: "./template/Layout/index",
     indexRoute: { component: homeTmpl },
     childRoutes: [
+      // 首页
       {
         path: "index-cn",
         component: homeTmpl,
       },
+      // 组件路由
       {
         path: "components/:children/",
         component: contentTmpl,

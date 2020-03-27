@@ -1,8 +1,9 @@
 const path = require("path");
 const replaceLib = require("@ant-design/tools/lib/replaceLib");
 const getWebpackConfig = require("@ant-design/tools/lib/getWebpackConfig");
+const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default; // 分割打包后过于庞大的css文件
 const { version } = require("../package.json");
-// const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default; // 分割打包后过于庞大的css文件
+
 const { webpack } = getWebpackConfig;
 
 const isDev = process.env.NODE_ENV === "development";
@@ -27,28 +28,21 @@ function alertBabelConfig(rules) {
 
 module.exports = {
   port: 8001,
-  hash: true,
+  // hash: true,
   source: {
-    components: "./library", // 组件路径
-    docs: "./docs", // 文档路径
-    changelog: ["CHANGELOG.zh-CN.md", "CHANGELOG.en-US.md"], // 修改历史
+    components: "./components", // 组件路径
+    docs: "./lib", // 文档路径
+    changelog: ["CHANGELOG.zh-CN.md"], // 修改历史
     // "docs/resources": ["./docs/resources.zh-CN.md", "./docs/resources.en-US.md"],
   },
+  htmlTemplate: "./site/theme/static/template.html", // 页面模板
   theme: "./site/theme", // 主题
-  htmlTemplate: "./site/theme/static/template.ejs", // 页面模板
   themeConfig: { // 主题配置
-    categoryOrder: { // 目录顺序
-      "Ant Design": 0,
-      全局样式: 1,
-      "Global Styles": 1,
-      设计模式: 2,
-      "Design Patterns": 2,
-      "设计模式 - 探索": 3,
-      "Design Patterns (Research)": 3,
-      Components: 100,
-      组件: 100,
-    },
-    typeOrder: { // 类型顺序
+    home: "/",
+    siteName: "hey-design",
+    tagline: "hello world",
+    github: "https://github.com/HEYAN123/hey",
+    typeOrder: { // 目录
       // 组件
       General: 0,
       Layout: 1,
@@ -75,15 +69,6 @@ module.exports = {
       模板文档: 3,
       "Template Document": 3,
     },
-    docVersions: {
-      "3.x": "http://3x.ant.design",
-      "2.x": "http://2x.ant.design",
-      "1.x": "http://1x.ant.design",
-      "0.12.x": "http://012x.ant.design",
-      "0.11.x": "http://011x.ant.design",
-      "0.10.x": "http://010x.ant.design",
-      "0.9.x": "http://09x.ant.design",
-    },
   },
   filePathMapper(filePath) {
     if (filePath === "/index.html") {
@@ -104,13 +89,13 @@ module.exports = {
     javascriptEnabled: true,
   },
   webpackConfig(config) {
+    // 配置别名 缩短引用路径
     // eslint-disable-next-line
-      config.resolve.alias = {
-      "antd/lib": path.join(process.cwd(), "components"),
-      "antd/es": path.join(process.cwd(), "components"),
-      antd: path.join(process.cwd(), "index"),
+    config.resolve.alias = {
+      "hey-design/lib": path.join(process.cwd(), "components"),
+      "hey-design/es": path.join(process.cwd(), "components"),
+      "hey-design": path.join(process.cwd(), "index.js"), // 返回nodejs进程的当前工作目录
       site: path.join(process.cwd(), "site"),
-      "react-router": "react-router/umd/ReactRouter",
       "react-intl": "react-intl/dist",
     };
 
@@ -118,16 +103,18 @@ module.exports = {
       config.externals = {
       "react-router-dom": "ReactRouterDOM",
     };
-
-    // if (usePreact) {
-    //   // eslint-disable-next-line
-    //     config.resolve.alias = Object.assign({}, config.resolve.alias, {
-    //     react: "preact-compat",
-    //     "react-dom": "preact-compat",
-    //     "create-react-class": "preact-compat/lib/create-react-class",
-    //     "react-router": "react-router",
-    //   });
-    // }
+    // eslint-disable-next-line
+    config.performance = {
+      hints: "warning",
+      // 入口起点的最大体积 整数类型（以字节为单位）
+      maxEntrypointSize: 50000000,
+      // 生成文件的最大体积 整数类型（以字节为单位 300k）
+      maxAssetSize: 30000000,
+      // 只给出 js 文件的性能提示
+      assetFilter(assetFilename) {
+        return assetFilename.endsWith(".js");
+      },
+    };
 
     if (isDev) {
       // eslint-disable-next-line
@@ -150,6 +137,12 @@ module.exports = {
       }),
     );
 
+    config.plugins.push(
+      new CSSSplitWebpackPlugin({
+        size: 3000,
+      }),
+    );
+
     // eslint-disable-next-line no-param-reassign
     delete config.module.noParse;
 
@@ -157,8 +150,8 @@ module.exports = {
   },
 
   devServerConfig: {
-    public: process.env.DEV_HOST || "localhost",
-    disableHostCheck: !!process.env.DEV_HOST,
+    // public: process.env.DEV_HOST || "localhost",
+    disableHostCheck: true,
   },
 
   htmlTemplateExtraData: {
