@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useTheme } from "react-jss";
 import buttonStyle from "./styles";
 
-function ButtonComponent(props) {
+function ButtonItem(props) {
   const theme = useTheme();
   const classes = buttonStyle({ theme });
   const { children } = props;
@@ -16,12 +16,12 @@ function ButtonComponent(props) {
   );
 }
 
-ButtonComponent.propTypes = {
+ButtonItem.propTypes = {
   children: PropTypes.node,
 };
 
-ButtonComponent.defaultProps = {
+ButtonItem.defaultProps = {
   children: "",
 };
 
-export default ButtonComponent;
+export default ButtonItem;

@@ -30,8 +30,8 @@ module.exports = {
   port: 8001,
   // hash: true,
   source: {
-    components: "./library", // 组件路径
-    docs: "./docs", // 文档路径
+    components: "./components", // 组件路径
+    docs: "./lib", // 文档路径
     changelog: ["CHANGELOG.zh-CN.md"], // 修改历史
     // "docs/resources": ["./docs/resources.zh-CN.md", "./docs/resources.en-US.md"],
   },
@@ -42,18 +42,7 @@ module.exports = {
     siteName: "hey-design",
     tagline: "hello world",
     github: "https://github.com/HEYAN123/hey",
-    categoryOrder: { // 目录顺序
-      "Ant Design": 0,
-      全局样式: 1,
-      "Global Styles": 1,
-      设计模式: 2,
-      "Design Patterns": 2,
-      "设计模式 - 探索": 3,
-      "Design Patterns (Research)": 3,
-      Components: 100,
-      组件: 100,
-    },
-    typeOrder: { // 类型顺序
+    typeOrder: { // 目录
       // 组件
       General: 0,
       Layout: 1,
@@ -100,19 +89,31 @@ module.exports = {
     javascriptEnabled: true,
   },
   webpackConfig(config) {
+    // 配置别名 缩短引用路径
     // eslint-disable-next-line
-      config.resolve.alias = {
-      "hey-design/lib": path.join(process.cwd(), "library"),
-      "hey-design/es": path.join(process.cwd(), "library"),
-      hey: path.join(process.cwd(), "index"),
+    config.resolve.alias = {
+      "hey-design/lib": path.join(process.cwd(), "components"),
+      "hey-design/es": path.join(process.cwd(), "components"),
+      "hey-design": path.join(process.cwd(), "index.js"), // 返回nodejs进程的当前工作目录
       site: path.join(process.cwd(), "site"),
-      "react-router": "react-router/umd/ReactRouter",
       "react-intl": "react-intl/dist",
     };
 
     // eslint-disable-next-line
       config.externals = {
       "react-router-dom": "ReactRouterDOM",
+    };
+    // eslint-disable-next-line
+    config.performance = {
+      hints: "warning",
+      // 入口起点的最大体积 整数类型（以字节为单位）
+      maxEntrypointSize: 50000000,
+      // 生成文件的最大体积 整数类型（以字节为单位 300k）
+      maxAssetSize: 30000000,
+      // 只给出 js 文件的性能提示
+      assetFilter(assetFilename) {
+        return assetFilename.endsWith(".js");
+      },
     };
 
     if (isDev) {

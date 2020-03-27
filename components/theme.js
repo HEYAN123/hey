@@ -1,6 +1,11 @@
-// 基于antd设计语言的样式常量
+// 设计常量
 
-// 纵向间距关系
+const theme = {
+  background: "#f7df1e",
+  color: "#24292e",
+};
+
+export default theme;
 
 export const spacingB = 8;
 export const spacingM = 16;

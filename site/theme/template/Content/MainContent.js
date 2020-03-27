@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../../../library";
+import { Button } from "hey-design";
 
 export default function MainContent() {
   return (
