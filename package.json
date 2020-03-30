@@ -7,9 +7,10 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "site": "bisheng start -c ./site/bisheng.config.js",
     "build": "webpack --config webpack.pro.js",
-    "site-build": "bisheng build -c ./site/bisheng.config.js",
+    "site-build": "bisheng build --ssr -c ./site/bisheng.config.js",
     "lint": "eslint --ext .js src",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "pub": "antd-tools run pub"
   },
   "pre-commit": [
     "lint"
