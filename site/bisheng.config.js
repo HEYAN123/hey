@@ -1,7 +1,7 @@
 const path = require("path");
 const replaceLib = require("@ant-design/tools/lib/replaceLib");
 const getWebpackConfig = require("@ant-design/tools/lib/getWebpackConfig");
-const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default; // 分割打包后过于庞大的css文件
+// const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default; // 分割打包后过于庞大的css文件
 const { version } = require("../package.json");
 
 const { webpack } = getWebpackConfig;
@@ -134,12 +134,6 @@ module.exports = {
     config.plugins.push(
       new webpack.DefinePlugin({
         antdReproduceVersion: JSON.stringify(version),
-      }),
-    );
-
-    config.plugins.push(
-      new CSSSplitWebpackPlugin({
-        size: 3000,
       }),
     );
 

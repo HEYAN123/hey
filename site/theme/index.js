@@ -3,26 +3,28 @@ const path = require("path");
 const homeTmpl = "./template/Home/index";
 const contentTmpl = "./template/Content/index";
 
-function pickerGenerator(module) {
-  const tester = new RegExp(`^docs/${module}`);
-  return markdownData => {
-    const { filename } = markdownData.meta;
-    if (tester.test(filename) && !/\/demo$/.test(path.dirname(filename))) {
-      return {
-        meta: markdownData.meta,
-      };
-    }
-    return null;
-  };
-}
+// function pickerGenerator(module) {
+//   const tester = new RegExp(`^docs/${module}`);
+//   return markdownData => {
+//     const { filename } = markdownData.meta;
+//     if (tester.test(filename) && !/\/demo$/.test(path.dirname(filename))) {
+//       return {
+//         meta: markdownData.meta,
+//       };
+//     }
+//     return null;
+//   };
+// }
 
 module.exports = {
-  lazyLoad(nodePath, nodeValue) {
-    if (typeof nodeValue === "string") {
-      return true;
-    }
-    return nodePath.endsWith("/demo");
-  },
+  // ❓会更新不断
+  // lazyLoad(nodePath, nodeValue) {
+  //   if (typeof nodeValue === "string") {
+  //     return true;
+  //   }
+  //   console.log("node", nodePath);
+  //   return nodePath.endsWith("/demo");
+  // },
   pick: {
     components(markdownData) {
       const { filename } = markdownData.meta;
@@ -41,8 +43,8 @@ module.exports = {
       }
       return null;
     },
-    "docs/react": pickerGenerator("react"),
-    "docs/spec": pickerGenerator("spec"),
+    // "docs/react": pickerGenerator("react"),
+    // "docs/spec": pickerGenerator("spec"),
   },
   plugins: [
     "bisheng-plugin-description",
