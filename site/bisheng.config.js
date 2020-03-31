@@ -33,7 +33,7 @@ module.exports = {
     components: "./components", // 组件路径
     docs: "./lib", // 文档路径
     changelog: ["CHANGELOG.zh-CN.md"], // 修改历史
-    // "docs/resources": ["./docs/resources.zh-CN.md", "./docs/resources.en-US.md"],
+    "library/resources": ["./library/resources.zh-CN.md"],
   },
   htmlTemplate: "./site/theme/static/template.html", // 页面模板
   theme: "./site/theme", // 主题
