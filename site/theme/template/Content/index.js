@@ -6,8 +6,10 @@ function isChangelog(pathname) {
 }
 
 export default collect(async (nextProps) => {
+  console.log(nextProps);
   const { pathname } = nextProps.location;
   const pageDataPath = pathname.replace("-cn", "").split("/");
+  // 🐛 nextProps.data里每个属性都应该是个f()
   const pageData = isChangelog(pathname)
     ? nextProps.data.changelog.CHANGELOG
     : nextProps.utils.get(nextProps.data, pageDataPath);

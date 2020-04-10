@@ -21,7 +21,6 @@ export function getLocalizedPathname(path, zhCN, hash) {
     const localHash = hash[zhCN ? "zhCN" : "enUS"];
     fullPath += `#${localHash}`;
   }
-  console.log(fullPath);
   return fullPath;
 }
 

@@ -13,7 +13,7 @@ export default function NotFound() {
         <h1>404</h1>
         <p>
           你要找的页面不存在
-          <Link to={window.location.port ? "/" : "/kitchen-sink"} onClick={handleClick}>返回首页</Link>
+          <Link to={window.location.port ? "/" : "/index-cn"} onClick={handleClick}>返回首页</Link>
         </p>
       </section>
       <style

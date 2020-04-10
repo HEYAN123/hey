@@ -1,19 +1,26 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Link } from "bisheng/router";
-import { getLocalizedPathname } from "../utils";
+import * as utils from "../utils";
 
 // import { injectIntl } from "react-intl";
 
 // 网站首页
 
-class Home extends React.Component {
+class Home extends Component {
   constructor(props) {
     super(props);
-    // eslint-disable-next-line react/prop-types
-    this.state = {};
+    const { location } = this.props;
+    const { pathname } = location;
+    const isZhCN = utils.isZhCN(pathname);
+    this.state = {
+      isZhCN,
+    };
   }
 
   render() {
+    const { isZhCN } = this.state;
     return (
       <div>
         <div className="main-wrapper">
@@ -30,20 +37,25 @@ class Home extends React.Component {
           <div className="wrapper">
               文字文字
           </div>
-          <h1>
-            <Link
-              to={getLocalizedPathname("/library/resources", true, {
-                zhCN: "文章",
-                enUS: "Articles",
-              })}
-            >
-            more
-            </Link>
-          </h1>
+          <Link to="/library/resources-cn">
+            <button type="button" size="large">
+              开始
+            </button>
+          </Link>
         </div>
       </div>
     );
   }
 }
+
+Home.propTypes = {
+  location: PropTypes.object,
+  pathname: PropTypes.string,
+};
+
+Home.defaultProps = {
+  location: {},
+  pathname: "",
+};
 
 export default Home;

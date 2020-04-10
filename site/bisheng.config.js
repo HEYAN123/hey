@@ -1,11 +1,11 @@
+/* eslint-disable no-param-reassign */
 const path = require("path");
+const webpack = require("webpack");
+// const getWebpackConfig = require("@ant-design/tools/lib/getWebpackConfig");
 const replaceLib = require("@ant-design/tools/lib/replaceLib");
-const getWebpackConfig = require("@ant-design/tools/lib/getWebpackConfig");
-// const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default; // 分割打包后过于庞大的css文件
-const { version } = require("../package.json");
-
-const { webpack } = getWebpackConfig;
-
+const CSSSplitWebpackPlugin = require("css-split-webpack-plugin").default;
+// 分割打包后过于庞大的css文件
+// const { webpack } = getWebpackConfig;
 const isDev = process.env.NODE_ENV === "development";
 
 function alertBabelConfig(rules) {
@@ -26,17 +26,21 @@ function alertBabelConfig(rules) {
   });
 }
 
+// const reactExternals = {
+//   react: "react",
+//   "react-dom": "ReactDOM",
+//   "react-router": "ReactRouter",
+// };
+
 module.exports = {
-  port: 8001,
-  // hash: true,
+  port: 8003,
   source: {
     components: "./components", // 组件路径
-    docs: "./lib", // 文档路径
+    library: "./library", // 文档路径
     changelog: ["CHANGELOG.zh-CN.md"], // 修改历史
-    "library/resources": ["./library/resources.zh-CN.md"],
   },
   htmlTemplate: "./site/theme/static/template.html", // 页面模板
-  theme: "./site/theme", // 主题
+  theme: "./site/theme", //  /index.js 网站渲染模板入口
   themeConfig: { // 主题配置
     home: "/",
     siteName: "hey-design",
@@ -70,6 +74,7 @@ module.exports = {
       "Template Document": 3,
     },
   },
+  // 路径配置
   filePathMapper(filePath) {
     if (filePath === "/index.html") {
       return ["/index.html", "/index-cn.html"];
@@ -88,20 +93,30 @@ module.exports = {
   lessConfig: {
     javascriptEnabled: true,
   },
+  // 打包配置
   webpackConfig(config) {
+    // 扩展
+    // eslint-disable-next-line
+    config.externals = {
+      // history: "History",
+      "babel-polyfill": "this",
+      // "react-router-dom": "ReactRouterDOM",
+    };
+    // if (!isDev) {
+    //   config.externals = Object.assign(config.externals, reactExternals);
+    // } else {
+    config.devtool = "source-map";
+    // }
+    alertBabelConfig(config.module.rules);
+    config.plugins.push(new CSSSplitWebpackPlugin({ size: 4000 }));
     // 配置别名 缩短引用路径
     // eslint-disable-next-line
     config.resolve.alias = {
       "hey-design/lib": path.join(process.cwd(), "components"),
       "hey-design/es": path.join(process.cwd(), "components"),
       "hey-design": path.join(process.cwd(), "index.js"), // 返回nodejs进程的当前工作目录
-      site: path.join(process.cwd(), "site"),
       "react-intl": "react-intl/dist",
-    };
-
-    // eslint-disable-next-line
-      config.externals = {
-      "react-router-dom": "ReactRouterDOM",
+      site: path.join(process.cwd(), "site"),
     };
     // eslint-disable-next-line
     config.performance = {
@@ -115,27 +130,24 @@ module.exports = {
         return assetFilename.endsWith(".js");
       },
     };
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        "process.env": {
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        },
+      }),
+    );
 
-    if (isDev) {
-      // eslint-disable-next-line
-      config.devtool = 'source-map';
-      // eslint-disable-next-line no-param-reassign
-      config.resolve.alias = { ...config.resolve.alias, react: require.resolve("react") };
-    }
-
-    alertBabelConfig(config.module.rules);
+    config.module.rules.push({
+      test: /webpack-dev-server|to-fast-properties/,
+      loader: "babel-loader",
+    });
 
     config.module.rules.push({
       test: /\.mjs$/,
       include: /node_modules/,
       type: "javascript/auto",
     });
-
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        antdReproduceVersion: JSON.stringify(version),
-      }),
-    );
 
     // eslint-disable-next-line no-param-reassign
     delete config.module.noParse;
