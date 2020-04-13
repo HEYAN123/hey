@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "bisheng/router";
+import { getLocalizedPathname } from "../utils";
+
 // import { injectIntl } from "react-intl";
 
 // 网站首页
@@ -27,6 +30,16 @@ class Home extends React.Component {
           <div className="wrapper">
               文字文字
           </div>
+          <h1>
+            <Link
+              to={getLocalizedPathname("/library/resources", true, {
+                zhCN: "文章",
+                enUS: "Articles",
+              })}
+            >
+            more
+            </Link>
+          </h1>
         </div>
       </div>
     );

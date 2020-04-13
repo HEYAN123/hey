@@ -2,6 +2,7 @@ const path = require("path");
 
 const homeTmpl = "./template/Home/index";
 const contentTmpl = "./template/Content/index";
+const resourcesTmpl = "./template/Resources/index";
 
 // function pickerGenerator(module) {
 //   const tester = new RegExp(`^docs/${module}`);
@@ -66,6 +67,10 @@ module.exports = {
       {
         path: "components/:children/",
         component: contentTmpl,
+      },
+      {
+        path: "library/resources-cn",
+        component: resourcesTmpl,
       },
     ],
   },
