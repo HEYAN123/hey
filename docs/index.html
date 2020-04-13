@@ -4,8 +4,19 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hey Design | A Component Library</title>
-    <link rel="icon" href="icon.ico"/>
+    <title>Hey Design</title>
+    <link
+      rel="icon"
+      href="./icon.png"
+      type="image/x-icon"
+    />
+    
+    <style id="nprogress-style">
+      #nprogress {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -22,7 +33,7 @@
         }
         // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
         var pathname = location.pathname;
-        // 判断加载中英网页
+
         function isZhCN(pathname) {
           return /-cn\/?$/.test(pathname);
         }
@@ -83,6 +94,22 @@
         gtag('js', new Date());
         gtag('config', 'UA-72788897-1');
       }
+    </script>
+    <!-- Hotjar Tracking Code for ant.design -->
+    <script>
+      (function(h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function() {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 473408, hjsv: 5 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
   </body>
 </html>
