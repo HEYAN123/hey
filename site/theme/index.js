@@ -1,16 +1,14 @@
-const path = require("path");
-const cnLocale = require("./zh-CN");
+const path = require('path');
 
-const homeTmpl = "./template/Home/index";
-const contentTmpl = "./template/Content/index";
+const homeTmpl = './template/Home/index';
+const contentTmpl = './template/Content/index';
+const appShellTmpl = './template/AppShell';
 
-// 获取生成器picker
 function pickerGenerator(module) {
-  console.log("module", module);
-  const tester = new RegExp(`^library/${module}`);
+  const tester = new RegExp(`^docs/${module}`);
   return markdownData => {
     const { filename } = markdownData.meta;
-    if (tester.test(filename)) {
+    if (tester.test(filename) && !/\/demo$/.test(path.dirname(filename))) {
       return {
         meta: markdownData.meta,
       };
@@ -20,64 +18,73 @@ function pickerGenerator(module) {
 }
 
 module.exports = {
-  // ❓会更新不断
-  // lazyLoad(nodePath, nodeValue) {
-  //   if (typeof nodeValue === "string") {
-  //     return true;
-  //   }
-  //   console.log("node", nodePath);
-  //   return nodePath.endsWith("/demo");
-  // },
-  cnLocale,
+  lazyLoad(nodePath, nodeValue) {
+    if (typeof nodeValue === 'string') {
+      return true;
+    }
+    return nodePath.endsWith('/demo');
+  },
   pick: {
     components(markdownData) {
-      console.log("!!!!!!", markdownData);
       const { filename } = markdownData.meta;
-      if (!/^components/.test(filename)
-          || /\/demo$/.test(path.dirname(filename))) return;
-      /* eslint-disable consistent-return */
+      if (!/^components/.test(filename) || /[/\\]demo$/.test(path.dirname(filename))) {
+        return null;
+      }
       return {
         meta: markdownData.meta,
       };
-      /* eslint-enable consistent-return */
     },
-    /* eslint-disable consistent-return */
     changelog(markdownData) {
       if (/CHANGELOG/.test(markdownData.meta.filename)) {
         return {
           meta: markdownData.meta,
         };
       }
+      return null;
     },
-    /* eslint-enable consistent-return */
-    library: pickerGenerator("resources"),
+    'docs/react': pickerGenerator('react'),
   },
   plugins: [
-    "bisheng-plugin-description",
-    "bisheng-plugin-toc?maxDepth=2&keepElem",
-    "bisheng-plugin-antd?noPreview",
-    "bisheng-plugin-react?lang=__react",
+    'bisheng-plugin-description',
+    'bisheng-plugin-toc?maxDepth=2&keepElem',
+    '@ant-design/bisheng-plugin?injectProvider',
+    'bisheng-plugin-react?lang=__react',
   ],
   routes: {
-    // 总路由
-    path: "/",
-    // container
-    component: "./template/Layout/index",
-    // 首页路由指向的页面模板（首页）
+    path: '/',
+    component: './template/Layout/index',
     indexRoute: { component: homeTmpl },
     childRoutes: [
-      // 首页
       {
-        path: "index-cn",
+        path: 'app-shell',
+        component: appShellTmpl,
+      },
+      {
+        path: 'index-cn',
         component: homeTmpl,
       },
-      // 组件路由
       {
-        path: "components/:children/",
+        path: 'docs/react/:children',
         component: contentTmpl,
       },
       {
-        path: "library/:children",
+        path: 'changelog',
+        component: contentTmpl,
+      },
+      {
+        path: 'changelog-cn',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/form/v3',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/form/v3-cn',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/:children/',
         component: contentTmpl,
       },
     ],

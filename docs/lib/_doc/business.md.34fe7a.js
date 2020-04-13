@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{439:function(i,l){i.exports={content:["article",["h1","lib说明"],["ul",["li",["p","lib文件夹用于放置与组件无关的页面文档"]]]],meta:{filename:"lib/_doc/business.md"},toc:["ul",["li",["a",{className:"bisheng-toc-h1",href:"#lib说明",title:"lib说明"},"lib说明"]]]}}}]);
