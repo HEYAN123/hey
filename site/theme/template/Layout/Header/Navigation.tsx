@@ -64,7 +64,7 @@ export default ({
 
   return (
     <Menu
-      className={classNames('menu-site')}
+      className={classNames('menu-site', 'menu-site-nav')}
       mode={menuMode}
       selectedKeys={[activeMenuItem]}
       id="nav"
