@@ -16,6 +16,8 @@ if (
 }
 /* @remove-on-es-build-end */
 
+export { default as Footer } from './footer';
+
 export { default as Affix } from './affix';
 
 export { default as Anchor } from './anchor';

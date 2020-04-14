@@ -1,9 +1,8 @@
 import React, { Children, cloneElement } from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import { Helmet } from 'react-helmet-async';
 import { getChildren } from 'jsonml.js/lib/utils';
 import { Timeline, Alert, Affix } from 'antd';
-import EditButton from './EditButton';
 import { getMetaDescription } from '../utils';
 
 interface LocaleString {
@@ -101,7 +100,7 @@ class Article extends React.Component<ArticleProps> {
       utils,
     } = this.props;
     const { meta, description } = content;
-    const { title, subtitle, filename } = meta;
+    const { title, subtitle } = meta;
     const isNotTranslated = locale === 'en-US' && typeof title === 'object';
     const helmetTitle = `${(title as LocaleString)[locale] || title} - Ant Design`;
     const helmetDesc = getMetaDescription(description);
@@ -133,10 +132,6 @@ class Article extends React.Component<ArticleProps> {
           <h1>
             {(title as LocaleString)[locale] || title}
             {!subtitle || locale === 'en-US' ? null : <span className="subtitle">{subtitle}</span>}
-            <EditButton
-              title={<FormattedMessage id="app.content.edit-page" />}
-              filename={filename}
-            />
           </h1>
           {!description
             ? null

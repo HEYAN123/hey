@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
 import { Row, Col, Menu, Affix, Tooltip, Avatar } from 'antd';
 import { injectIntl } from 'react-intl';
-import { LeftOutlined, RightOutlined, ExportOutlined } from '@ant-design/icons';
+import { ExportOutlined } from '@ant-design/icons';
 import ContributorsList from '@qixian.cs/github-contributors-list';
 import classNames from 'classnames';
 import get from 'lodash/get';
@@ -11,7 +11,6 @@ import MobileMenu from 'rc-drawer';
 
 import { DarkIcon, DefaultIcon } from './ThemeIcon';
 import Article from './Article';
-import PrevAndNext from './PrevAndNext';
 import Footer from '../Layout/Footer';
 import SiteContext from '../Layout/SiteContext';
 import ComponentDoc from './ComponentDoc';
@@ -299,11 +298,6 @@ class MainContent extends Component {
           const { meta } = localizedPageData;
           const activeMenuItem = this.getActiveMenuItem();
           const menuItems = this.getMenuItems();
-          const menuItemsForFooterNav = this.getMenuItems({
-            before: <LeftOutlined className="footer-nav-icon-before" />,
-            after: <RightOutlined className="footer-nav-icon-after" />,
-          });
-          const { prev, next } = this.getFooterNav(menuItemsForFooterNav, activeMenuItem);
           const mainContainerClass = classNames('main-container', {
             'main-container-component': !!demos,
           });
@@ -394,7 +388,6 @@ class MainContent extends Component {
                       </Tooltip>
                     </div>
                   )}
-                  <PrevAndNext prev={prev} next={next} />
                   <Footer />
                 </Col>
               </Row>

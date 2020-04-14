@@ -70,7 +70,7 @@
     "start:preact": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=preact bisheng start -c ./site/bisheng.config.js",
     "test": "jest --config .jest.js --no-cache",
     "test:update": "jest --config .jest.js --no-cache --update-snapshot",
-    "test-all": "./scripts/test-all.sh",
+    "test-all": "sh ./scripts/test-all.sh",
     "test-node": "jest --config .jest.node.js --no-cache",
     "tsc": "tsc",
     "site:test": "jest --config .jest.site.js --cache=false"

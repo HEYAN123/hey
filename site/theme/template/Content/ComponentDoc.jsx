@@ -6,7 +6,6 @@ import { Row, Col, Affix, Tooltip } from 'antd';
 import { getChildren } from 'jsonml.js/lib/utils';
 import { CodeFilled, CodeOutlined, BugFilled, BugOutlined } from '@ant-design/icons';
 import Demo from './Demo';
-import EditButton from './EditButton';
 import { ping, getMetaDescription } from '../utils';
 
 class ComponentDoc extends React.Component {
@@ -160,10 +159,6 @@ class ComponentDoc extends React.Component {
           <h1>
             {title[locale] || title}
             {!subtitle ? null : <span className="subtitle">{subtitle}</span>}
-            <EditButton
-              title={<FormattedMessage id="app.content.edit-page" />}
-              filename={filename}
-            />
           </h1>
           {utils.toReactComponent(
             ['section', { className: 'markdown' }].concat(getChildren(content)),

@@ -9,7 +9,7 @@ const primaryMinBrightness = 70; // 主色推荐最小亮度
 // eslint-disable-next-line
 export default class ColorPaletteTool extends Component {
   state = {
-    primaryColor: '#1890ff',
+    primaryColor: '#667387',
     primaryColorInstance: null,
   };
 

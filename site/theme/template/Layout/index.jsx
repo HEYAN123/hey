@@ -17,7 +17,6 @@ import SiteContext from './SiteContext';
 import enLocale from '../../en-US';
 import cnLocale from '../../zh-CN';
 import * as utils from '../utils';
-import icon from '../icon.png';
 
 if (typeof window !== 'undefined' && navigator.serviceWorker) {
   navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -205,7 +204,7 @@ export default class Layout extends React.Component {
     const title =
       appLocale.locale === 'zh-CN'
         ? 'Hey Design - 基于react的可定制组件库'
-        : 'Ant Design - A UI Design Language and React UI library';
+        : 'Hey Design - A React UI library';
     const description =
       appLocale.locale === 'zh-CN'
         ? '基于 Ant Design 设计体系的 React UI 组件库，用于研发企业级中后台产品。'
@@ -220,11 +219,10 @@ export default class Layout extends React.Component {
           <Helmet encodeSpecialCharacters={false}>
             <html lang={appLocale.locale === 'zh-CN' ? 'zh' : 'en'} data-direction={direction} />
             <title>{title}</title>
-            <link
+            {/* <link
               rel="apple-touch-icon-precomposed"
               sizes="144x144"
-              href={icon}
-            />
+            /> */}
             <meta name="description" content={description} />
             <meta property="og:title" content={title} />
             <meta property="og:type" content="website" />

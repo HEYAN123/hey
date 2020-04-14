@@ -1,7 +1,4 @@
-// 页脚
-
 import React from 'react';
-// import RcFooter from 'rc-footer'; OWN
 
 function Footer() {
     return (

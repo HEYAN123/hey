@@ -9,7 +9,6 @@ import { Tooltip, Alert } from 'antd';
 import { SnippetsOutlined, CheckOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import stackblitzSdk from '@stackblitz/sdk';
 import CodePreview from './CodePreview';
-import EditButton from '../EditButton';
 import BrowserFrame from '../../BrowserFrame';
 
 const { ErrorBoundary } = Alert;
@@ -310,10 +309,6 @@ ${parsedSourceCode.replace('mountNode', "document.getElementById('container')")}
                 {localizedTitle}
               </a>
             </Tooltip>
-            <EditButton
-              title={<FormattedMessage id="app.content.edit-demo" />}
-              filename={meta.filename}
-            />
           </div>
           <div className="code-box-description">{introChildren}</div>
           <div className="code-box-actions">
