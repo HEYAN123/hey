@@ -30,13 +30,8 @@ export default function Banner() {
 
           <div className="home-banner-content-operations">
             <Link to={getLocalizedPathname('/docs/react/introduce', isZhCN)}>
-              <Button type="primary" shape="round">
+              <Button ghost shape="round">
                 <FormattedMessage id="app.home.getting-started" />
-              </Button>
-            </Link>
-            <Link to={getLocalizedPathname('/docs/spec/introduce', isZhCN)}>
-              <Button shape="round" ghost>
-                <FormattedMessage id="app.home.design-language" />
               </Button>
             </Link>
           </div>

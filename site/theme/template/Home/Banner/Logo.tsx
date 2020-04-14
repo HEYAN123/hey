@@ -1,4 +1,5 @@
 import * as React from 'react';
+import LogoPic from './LogoPic';
 import './Logo.less';
 
 export default function Logo() {
@@ -6,7 +7,7 @@ export default function Logo() {
     <div
       className="home-card-logo"
     >
-      <h1>Hey Design</h1>
+      <LogoPic />
     </div>
   );
 }
