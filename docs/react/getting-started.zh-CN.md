@@ -1,6 +1,6 @@
 ---
 order: 2
-title: 快速上手
+title: 使用说明
 ---
 
 Hey Design React 致力于提供给程序员**愉悦**的开发体验。

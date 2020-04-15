@@ -1,6 +1,6 @@
 ---
 order: 3
-title: 项目实战
+title: 进阶开发
 ---
 
 在真实项目开发中，你可能会需要 Redux 或者 MobX 这样的数据流方案，Hey Design React 作为一个 UI 库，可以和任何 React 生态圈内的数据流方案以及应用框架搭配使用。我们基于 Redux 推出了自己的最佳实践 dva，以及可插拔的企业级应用框架 umi，推荐你在项目中使用。
