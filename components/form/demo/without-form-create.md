@@ -15,7 +15,7 @@ title:
 
 ```tsx
 import React, { useState } from 'react';
-import { Form, InputNumber } from 'antd';
+import { Form, InputNumber } from 'hey-design';
 
 function validatePrimeNumber(number) {
   if (number === 11) {

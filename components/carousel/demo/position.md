@@ -14,7 +14,7 @@ title:
 There are 4 position options available.
 
 ```jsx
-import { Carousel, Radio } from 'antd';
+import { Carousel, Radio } from 'hey-design';
 
 class PositionCarouselDemo extends React.Component {
   state = {

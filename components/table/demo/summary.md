@@ -14,7 +14,7 @@ title:
 Set summary content by `summary` prop.
 
 ```jsx
-import { Table, Typography } from 'antd';
+import { Table, Typography } from 'hey-design';
 
 const { Text } = Typography;
 

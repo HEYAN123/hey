@@ -217,7 +217,7 @@ const columns = [
 ## 在 TypeScript 中使用
 
 ```tsx
-import { Table } from 'antd';
+import { Table } from 'hey-design';
 import { ColumnProps } from 'antd/es/table';
 
 interface User {

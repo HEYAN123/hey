@@ -14,7 +14,7 @@ title:
 Provides multiple types of text.
 
 ```jsx
-import { Typography } from 'antd';
+import { Typography } from 'hey-design';
 
 const { Text } = Typography;
 

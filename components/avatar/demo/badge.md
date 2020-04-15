@@ -14,7 +14,7 @@ title:
 Usually used for reminders and notifications.
 
 ```tsx
-import { Avatar, Badge } from 'antd';
+import { Avatar, Badge } from 'hey-design';
 import { UserOutlined } from '@ant-design/icons';
 
 ReactDOM.render(

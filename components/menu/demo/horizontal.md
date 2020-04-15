@@ -14,7 +14,7 @@ title:
 Horizontal top navigation menu.
 
 ```jsx
-import { Menu } from 'antd';
+import { Menu } from 'hey-design';
 import {
   MailOutlined,
   AppstoreOutlined,

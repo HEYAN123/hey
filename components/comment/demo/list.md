@@ -14,7 +14,7 @@ title:
 Displaying a series of comments using the `antd` List Component.
 
 ```jsx
-import { Comment, Tooltip, List } from 'antd';
+import { Comment, Tooltip, List } from 'hey-design';
 import moment from 'moment';
 
 const data = [

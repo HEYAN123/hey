@@ -14,7 +14,7 @@ title:
 We can set preset ranges to RangePicker to improve user experience.
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'hey-design';
 import moment from 'moment';
 
 const { RangePicker } = DatePicker;

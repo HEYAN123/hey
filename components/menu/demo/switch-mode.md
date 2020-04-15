@@ -14,7 +14,7 @@ title:
 Show the dynamic switching mode (between 'inline' and 'vertical').
 
 ```jsx
-import { Menu, Switch } from 'antd';
+import { Menu, Switch } from 'hey-design';
 import {
   MailOutlined,
   CalendarOutlined,

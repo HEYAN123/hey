@@ -20,7 +20,7 @@ import {
   Radio,
   AutoComplete,
   Mentions,
-} from 'antd';
+} from 'hey-design';
 
 const { Text } = Typography;
 const RadioButton = Radio.Button;

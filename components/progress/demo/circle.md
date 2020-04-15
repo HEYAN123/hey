@@ -14,7 +14,7 @@ title:
 A circular progress bar.
 
 ```jsx
-import { Progress } from 'antd';
+import { Progress } from 'hey-design';
 
 ReactDOM.render(
   <div>

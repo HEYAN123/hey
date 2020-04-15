@@ -14,7 +14,7 @@ title:
 Select your favourite topics.
 
 ```jsx
-import { Tag } from 'antd';
+import { Tag } from 'hey-design';
 
 const { CheckableTag } = Tag;
 

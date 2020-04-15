@@ -32,7 +32,7 @@ Hey Design React 致力于提供给程序员**愉悦**的开发体验。
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConfigProvider, DatePicker, message } from 'antd';
+import { ConfigProvider, DatePicker, message } from 'hey-design';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
 import zhCN from 'antd/es/locale/zh_CN';
 import moment from 'moment';
@@ -76,8 +76,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 然后依照演示代码的写法，在之前的 codesandbox 里修改 `index.js`，首先在 `import` 内引入 Alert 组件：
 
 ```diff
-- import { ConfigProvider, DatePicker, message } from 'antd';
-+ import { ConfigProvider, DatePicker, message, Alert } from 'antd';
+- import { ConfigProvider, DatePicker, message } from 'hey-design';
++ import { ConfigProvider, DatePicker, message, Alert } from 'hey-design';
 ```
 
 然后在 `render` 内添加相应的 jsx 代码：
@@ -131,7 +131,7 @@ Hey Design 3.0 对 React 15/16 两个版本提供支持，但是我们强烈建�
 
 ## 按需加载
 
-如果你在开发环境的控制台看到下面的提示，那么你可能使用了 `import { Button } from 'antd';` 的写法引入了 antd 下所有的模块，这会影响应用的网络性能。
+如果你在开发环境的控制台看到下面的提示，那么你可能使用了 `import { Button } from 'hey-design';` 的写法引入了 antd 下所有的模块，这会影响应用的网络性能。
 
 ```
 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
@@ -146,12 +146,12 @@ import Button from 'antd/es/button';
 import 'antd/es/button/style'; // 或者 antd/es/button/style/css 加载 css 文件
 ```
 
-> 注意：antd 默认支持基于 ES module 的 tree shaking，对于 js 部分，直接引入 `import { Button } from 'antd'` 也会有按需加载的效果。
+> 注意：antd 默认支持基于 ES module 的 tree shaking，对于 js 部分，直接引入 `import { Button } from 'hey-design'` 也会有按需加载的效果。
 
 如果你使用了 babel，那么可以使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 来进行按需加载，加入这个插件后。你可以仍然这么写：
 
 ```jsx
-import { Button } from 'antd';
+import { Button } from 'hey-design';
 ```
 
 插件会帮你转换成 `antd/es/xxx` 的写法。另外此插件配合 [style](https://github.com/ant-design/babel-plugin-import#usage) 属性可以做到模块样式的按需自动加载。

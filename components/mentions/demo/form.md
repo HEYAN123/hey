@@ -14,7 +14,7 @@ title:
 Controlled mode, for example, to work with `Form`.
 
 ```tsx
-import { Mentions, Form, Button } from 'antd';
+import { Mentions, Form, Button } from 'hey-design';
 
 const { Option, getMentions } = Mentions;
 

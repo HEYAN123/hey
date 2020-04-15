@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from 'antd';
+import { Button } from 'hey-design';
 import { Link } from 'bisheng/router';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { PlayCircleFilled } from '@ant-design/icons';

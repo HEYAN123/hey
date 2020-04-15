@@ -14,7 +14,7 @@ title:
 New feature after 3.16.0. We preset a series of colorful Badge styles for use in different situations. You can also set it to a hex color string for custom color.
 
 ```jsx
-import { Badge } from 'antd';
+import { Badge } from 'hey-design';
 
 const colors = [
   'pink',

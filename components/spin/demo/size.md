@@ -14,7 +14,7 @@ title:
 A small `Spin` is used for loading text, default sized `Spin` for loading a card-level block, and large `Spin` used for loading a **page**.
 
 ```jsx
-import { Spin } from 'antd';
+import { Spin } from 'hey-design';
 
 ReactDOM.render(
   <div>

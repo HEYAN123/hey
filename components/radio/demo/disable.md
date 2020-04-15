@@ -14,7 +14,7 @@ Radio 不可用。
 Radio unavailable.
 
 ```jsx
-import { Radio, Button } from 'antd';
+import { Radio, Button } from 'hey-design';
 
 class App extends React.Component {
   state = {

@@ -2,7 +2,7 @@ import React, { Children, cloneElement } from 'react';
 import { injectIntl } from 'react-intl';
 import { Helmet } from 'react-helmet-async';
 import { getChildren } from 'jsonml.js/lib/utils';
-import { Timeline, Alert, Affix } from 'antd';
+import { Timeline, Alert, Affix } from 'hey-design';
 import { getMetaDescription } from '../utils';
 
 interface LocaleString {

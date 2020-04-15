@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'bisheng/router';
-import { Result, Button } from 'antd';
+import { Result, Button } from 'hey-design';
 import { HomeOutlined } from '@ant-design/icons';
 import * as utils from './utils';
 

@@ -22,7 +22,7 @@ If a large or small list is desired, set the size property to either large or sm
 Customizing the header and footer of list by setting `header` and `footer` property.
 
 ```jsx
-import { List, Typography } from 'antd';
+import { List, Typography } from 'hey-design';
 
 const data = [
   'Racing car sprays burning fuel into crowd.',

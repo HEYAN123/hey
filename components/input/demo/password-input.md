@@ -14,7 +14,7 @@ title:
 Input type of password.
 
 ```jsx
-import { Input } from 'antd';
+import { Input } from 'hey-design';
 
 ReactDOM.render(<Input.Password placeholder="input password" />, mountNode);
 ```

@@ -14,7 +14,7 @@ title:
 Use react-sticky.
 
 ```jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'hey-design';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 const { TabPane } = Tabs;

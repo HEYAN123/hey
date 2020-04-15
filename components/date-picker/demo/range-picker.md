@@ -14,7 +14,7 @@ title:
 Set range picker type by `picker` prop.
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'hey-design';
 
 const { RangePicker } = DatePicker;
 

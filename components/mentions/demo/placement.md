@@ -14,7 +14,7 @@ title:
 Change the suggestions placement.
 
 ```jsx
-import { Mentions } from 'antd';
+import { Mentions } from 'hey-design';
 
 const { Option } = Mentions;
 

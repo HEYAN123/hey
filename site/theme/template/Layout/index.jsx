@@ -7,7 +7,7 @@ import themeSwitcher from 'theme-switcher';
 import { setTwoToneColor } from '@ant-design/icons';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import 'moment/locale/zh-cn';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider } from 'hey-design';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
 // eslint-disable-next-line import/no-unresolved
@@ -37,7 +37,7 @@ if (typeof window !== 'undefined') {
   window.react = React;
   window['react-dom'] = ReactDOM;
   // eslint-disable-next-line global-require
-  window.antd = require('antd');
+  window.heyd = require('hey-design');
   // eslint-disable-next-line global-require
   window['@ant-design/icons'] = require('@ant-design/icons');
 

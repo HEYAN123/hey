@@ -14,7 +14,7 @@ title:
 Basic drawer.
 
 ```jsx
-import { Drawer, Button } from 'antd';
+import { Drawer, Button } from 'hey-design';
 
 class App extends React.Component {
   state = { visible: false };

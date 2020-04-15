@@ -14,7 +14,7 @@ title:
 Change `pageSize`.
 
 ```jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'hey-design';
 
 function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);

@@ -14,7 +14,7 @@ title:
 Show successful results.
 
 ```jsx
-import { Result, Button } from 'antd';
+import { Result, Button } from 'hey-design';
 
 ReactDOM.render(
   <Result

@@ -33,7 +33,7 @@ import {
   Rate,
   Badge,
   Divider,
-} from 'antd';
+} from 'hey-design';
 
 import {
   SearchOutlined as SearchIcon,
