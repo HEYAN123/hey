@@ -35,8 +35,6 @@ export default ({
   let activeMenuItem = module || 'home';
   if (location.pathname === 'changelog' || location.pathname === 'changelog-cn') {
     activeMenuItem = 'docs/react';
-  } else if (location.pathname === 'docs/resources' || location.pathname === 'docs/resources-cn') {
-    activeMenuItem = 'docs/resources';
   }
 
   let additional: React.ReactNode = null;

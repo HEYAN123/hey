@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'bisheng/router';
 import { Result, Button } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
@@ -21,28 +21,12 @@ export interface NotFoundProps {
   };
 }
 
-const DIRECT_MAP: Record<string, string> = {
-  'docs/spec/download': 'docs/resources',
-  'docs/spec/work-with-us': 'docs/resources',
-};
-
 export default function NotFound(props: NotFoundProps) {
   const {
     location: { pathname },
-    router,
   } = props;
 
   const isZhCN = utils.isZhCN(pathname);
-
-  useEffect(() => {
-    const directLinks = Object.keys(DIRECT_MAP);
-    for (let i = 0; i < directLinks.length; i += 1) {
-      const matchPath = directLinks[i];
-      if (pathname.includes(matchPath)) {
-        router.replace(utils.getLocalizedPathname(`/${DIRECT_MAP[matchPath]}`, isZhCN));
-      }
-    }
-  }, []);
 
   return (
     <div id="page-404">
