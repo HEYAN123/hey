@@ -8,7 +8,11 @@ title: Hey Design of React
 <div class="pic-plus">
   <img width="150" src="https://hey-design.oss-cn-beijing.aliyuncs.com/icon.png"/>
   <span>+</span>
-  <img width="160" src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"/>
+  <img width="150" src="https://hey-design.oss-cn-beijing.aliyuncs.com/icon-antd.svg" />
+  <span>+<span>
+  <img width="160" src="https://hey-design.oss-cn-beijing.aliyuncs.com/icon-react.svg"/>
+  <span>+<span>
+  <img width="150" src="https://hey-design.oss-cn-beijing.aliyuncs.com/icon-jss.ico" />
 </div>
 
 <style>
@@ -27,26 +31,21 @@ title: Hey Design of React
 
 ## ✨ 特性
 
-- 📗 默认样式遵循antd设计语言。
-- ✍️ 基于原生html开发封装的react组件，无嵌套依赖，使用灵活。
-- 🛡 使用 TypeScript 开发，提供完整的类型定义文件。
-- ⚙️ 全链路开发和设计工具体系。
-- 🌍 数十个国际化语言支持。
-- 🎨 深入每个细节的主题定制能力。
+- 默认样式遵循antd设计语言。
+- 基于原生html开发封装的react组件，复杂逻辑透明化封装，无嵌套依赖，使用灵活。
+- 使用 TypeScript 开发，提供完整的类型定义文件。
+- 样式易覆盖修改，轻松实现定制化开发。
 
-## 支持环境
+## 🏡 适用环境
 
-- 现代浏览器和 IE11 及以上（需要 [polyfills](https://ant.design/docs/react/getting-started-cn#兼容性)）。
-- 支持服务端渲染。
-- [Electron](https://electronjs.org/)
+- 现代浏览器和 IE11 及以上。
+- PC端前台展示型网站开发。
 
-## 版本
+## 📑 版本
 
-- 稳定版：[![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
+- 1.0.1开发版: <https://www.npmjs.com/package/hey-design>
 
-你可以订阅：https://github.com/ant-design/ant-design/releases.atom 来获得稳定版发布的通知。
-
-## 安装
+## 🚀 技术使用
 
 ### 使用 npm 或 yarn 安装
 
