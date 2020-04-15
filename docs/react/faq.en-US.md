@@ -3,7 +3,7 @@ order: 11
 title: FAQ
 ---
 
-Here are the frequently asked questions about Ant Design and antd that you should look up before you ask in the community or create a new issue. We also maintain a [FAQ issues label](http://u.ant.design/faq) for common github issues.
+Here are the frequently asked questions about Hey Design and antd that you should look up before you ask in the community or create a new issue. We also maintain a [FAQ issues label](http://u.ant.design/faq) for common github issues.
 
 ---
 
@@ -25,13 +25,13 @@ Use `<Select getPopupContainer={trigger => trigger.parentNode}>` ([API reference
 
 related issue: [#3487](https://github.com/ant-design/ant-design/issues/3487) [#3438](https://github.com/ant-design/ant-design/issues/3438)
 
-### How do I modify the default theme of Ant Design?
+### How do I modify the default theme of Hey Design?
 
 See: https://ant.design/docs/react/customize-theme .
 
 ### Would you supply other themes?
 
-No, we follow Ant Design specification. https://github.com/ant-design/ant-design/issues/1241
+No, we follow Hey Design specification. https://github.com/ant-design/ant-design/issues/1241
 
 ### How to modify `Menu`/`Button`(etc.)'s style?
 
@@ -117,9 +117,9 @@ Like [the explaination](https://github.com/ant-design/ant-design/issues/11586#is
 
 You can refer to [this article](https://juejin.im/post/5cf65c366fb9a07eca6968f9) or [this article](https://www.cnblogs.com/zyl-Tara/p/10197177.html), using `mode` and `onPanelChange` to encapsulate a `YearPicker` or `MonthRangePicker` for your needs. Or you can wait for our [antd@4.0](https://github.com/ant-design/ant-design/issues/16911), in which we are planing (already) to [add more XxxPickers](https://github.com/ant-design/ant-design/issues/4524#issuecomment-480576884) for those requirments.
 
-### How to spell Ant Design correctly?
+### How to spell Hey Design correctly?
 
-- ✅ **Ant Design**: Capitalized with space, for the design language.
+- ✅ **Hey Design**: Capitalized with space, for the design language.
 - ✅ **antd**: all lowercase, for the React UI library.
 - ✅ **ant.design**：For ant.design website url.
 

@@ -21,20 +21,20 @@ const { Paragraph } = Typography;
 ReactDOM.render(
   <div>
     <Paragraph ellipsis>
-      Ant Design, a design language for background applications, is refined by Ant UED Team. Ant
-      Design, a design language for background applications, is refined by Ant UED Team. Ant Design,
-      a design language for background applications, is refined by Ant UED Team. Ant Design, a
-      design language for background applications, is refined by Ant UED Team. Ant Design, a design
-      language for background applications, is refined by Ant UED Team. Ant Design, a design
+      Hey Design, a design language for background applications, is refined by Ant UED Team. Ant
+      Design, a design language for background applications, is refined by Ant UED Team. Hey Design,
+      a design language for background applications, is refined by Ant UED Team. Hey Design, a
+      design language for background applications, is refined by Ant UED Team. Hey Design, a design
+      language for background applications, is refined by Ant UED Team. Hey Design, a design
       language for background applications, is refined by Ant UED Team.
     </Paragraph>
 
     <Paragraph ellipsis={{ rows: 3, expandable: true }}>
-      Ant Design, a design language for background applications, is refined by Ant UED Team. Ant
-      Design, a design language for background applications, is refined by Ant UED Team. Ant Design,
-      a design language for background applications, is refined by Ant UED Team. Ant Design, a
-      design language for background applications, is refined by Ant UED Team. Ant Design, a design
-      language for background applications, is refined by Ant UED Team. Ant Design, a design
+      Hey Design, a design language for background applications, is refined by Ant UED Team. Ant
+      Design, a design language for background applications, is refined by Ant UED Team. Hey Design,
+      a design language for background applications, is refined by Ant UED Team. Hey Design, a
+      design language for background applications, is refined by Ant UED Team. Hey Design, a design
+      language for background applications, is refined by Ant UED Team. Hey Design, a design
       language for background applications, is refined by Ant UED Team.
     </Paragraph>
   </div>,

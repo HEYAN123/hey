@@ -277,7 +277,7 @@ exports[`renders ./components/input/demo/align.md correctly 1`] = `
   <span
     class="ant-typography"
   >
-    Ant Design
+    Hey Design
     <div
       aria-label="Copy"
       class="ant-typography-copy"

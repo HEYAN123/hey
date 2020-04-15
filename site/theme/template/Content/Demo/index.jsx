@@ -176,7 +176,7 @@ class Demo extends React.Component {
     const sourceCode = this.getSourceCode();
 
     const codepenPrefillConfig = {
-      title: `${localizedTitle} - Ant Design Demo`,
+      title: `${localizedTitle} - Hey Design Demo`,
       html,
       js: sourceCode
         .replace(/import\s+\{(\s+[^}]*\s+)\}\s+from\s+'antd';/, 'const { $1 } = antd;')
@@ -210,7 +210,7 @@ class Demo extends React.Component {
       js_pre_processor: 'typescript',
     };
     const riddlePrefillConfig = {
-      title: `${localizedTitle} - Ant Design Demo`,
+      title: `${localizedTitle} - Hey Design Demo`,
       js: sourceCode,
       css: prefillStyle,
     };
@@ -254,7 +254,7 @@ ${parsedSourceCode.replace('mountNode', "document.getElementById('container')")}
     const indexCssContent = (style || '').replace(new RegExp(`#${meta.id}\\s*`, 'g'), '');
 
     const codesandboxPackage = {
-      name: `${localizedTitle} - Ant Design Demo`,
+      name: `${localizedTitle} - Hey Design Demo`,
       version: '1.0.0',
       main: 'index.js',
       dependencies: {
@@ -285,7 +285,7 @@ ${parsedSourceCode.replace('mountNode', "document.getElementById('container')")}
       },
     };
     const stackblitzPrefillConfig = {
-      title: `${localizedTitle} - Ant Design Demo`,
+      title: `${localizedTitle} - Hey Design Demo`,
       template: 'create-react-app',
       dependencies,
       files: {

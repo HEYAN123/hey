@@ -1,5 +1,5 @@
 ---
-category: Ant Design
+category: Hey Design
 order: 0
 title: Introduction
 ---
@@ -42,25 +42,25 @@ const LinkIcon = () => (
 const LinksList = () => (
   <ul>
     <li>
-      <a href="/docs/react/introduce" target="_blank">Ant Design of React</a>
+      <a href="/docs/react/introduce" target="_blank">Hey Design of React</a>
       (official implementation)
     </li>
     <li>
       <a href="http://ng.ant.design" target="_blank">
-        NG-ZORRO - Ant Design of Angular<LinkIcon />
+        NG-ZORRO - Hey Design of Angular<LinkIcon />
       </a>
     </li>
     <li>
       <a href="http://ng.mobile.ant.design" target="_blank">
-        NG-ZORRO-MOBILE - Ant Design Mobile of Angular<LinkIcon />
+        NG-ZORRO-MOBILE - Hey Design Mobile of Angular<LinkIcon />
       </a>
     </li>
     <li>
-      <a href="http://vue.ant.design" target="_blank">Ant Design of Vue<LinkIcon /></a>
+      <a href="http://vue.ant.design" target="_blank">Hey Design of Vue<LinkIcon /></a>
     </li>
     <li>
       <a href="https://ecomfe.github.io/santd" target="_blank">
-        San UI Toolkit for Ant Design<LinkIcon />
+        San UI Toolkit for Hey Design<LinkIcon />
       </a>
     </li>
     <li>
@@ -89,7 +89,7 @@ const LinksList = () => (
 ReactDOM.render(<LinksList />, mountNode);
 ```
 
-## Who's using Ant Design
+## Who's using Hey Design
 
 - [Ant Financial](http://www.antgroup.com/index.htm?locale=en_US)
 - [Alibaba](http://www.alibaba.com/)
@@ -101,14 +101,14 @@ ReactDOM.render(<LinksList />, mountNode);
 - [Eleme](https://www.ele.me/)
 - [Other Users](https://github.com/ant-design/ant-design/issues/477)
 
-> If your company or products use Ant Design, and you'd like to be added to this growing list, click [here](https://github.com/ant-design/ant-design/issues/477) to leave us a message.
+> If your company or products use Hey Design, and you'd like to be added to this growing list, click [here](https://github.com/ant-design/ant-design/issues/477) to leave us a message.
 
 ## Words From Community
 
 - Hacknews: [Show HN: Antd – A set of high-quality React components](https://news.ycombinator.com/item?id=13053137)
-- Alligator: [Crafting Beautiful UIs in React Using Ant Design](https://alligator.io/react/beautiful-uis-ant-design/)
+- Alligator: [Crafting Beautiful UIs in React Using Hey Design](https://alligator.io/react/beautiful-uis-ant-design/)
 - Hackernoon: [Interesting JavaScript Libraries born in China](https://hackernoon.com/interesting-javascript-libraries-born-in-china-d50d1bb81355)
 
 ## How to Contribute
 
-Contributions to Ant Design on Github are welcomed! Whether you have questions, concerns, or suggestions for improving Ant Design - please don't hesitate to reach out to us [here](https://github.com/ant-design/ant-design/issues).
+Contributions to Hey Design on Github are welcomed! Whether you have questions, concerns, or suggestions for improving Hey Design - please don't hesitate to reach out to us [here](https://github.com/ant-design/ant-design/issues).

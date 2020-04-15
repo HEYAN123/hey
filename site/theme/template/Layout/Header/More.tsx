@@ -24,7 +24,7 @@ export function getEcosystemGroup({ isZhCN }: SharedProps): React.ReactElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ant Design of Angular
+          Hey Design of Angular
         </a>
       </Menu.Item>
       <Menu.Item key="vue">
@@ -34,7 +34,7 @@ export function getEcosystemGroup({ isZhCN }: SharedProps): React.ReactElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ant Design of Vue
+          Hey Design of Vue
         </a>
       </Menu.Item>
       {isZhCN ? (
@@ -45,7 +45,7 @@ export function getEcosystemGroup({ isZhCN }: SharedProps): React.ReactElement {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ant Design 实战教程
+            Hey Design 实战教程
           </a>
         </Menu.Item>
       ) : null}

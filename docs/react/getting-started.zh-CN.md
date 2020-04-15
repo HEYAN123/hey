@@ -3,7 +3,7 @@ order: 2
 title: 快速上手
 ---
 
-Ant Design React 致力于提供给程序员**愉悦**的开发体验。
+Hey Design React 致力于提供给程序员**愉悦**的开发体验。
 
 > 在开始之前，推荐先学习 [React](http://reactjs.org) 和 [ES2015](http://babeljs.io/docs/learn-es2015/)，并正确安装和配置了 [Node.js](https://nodejs.org/) v8 或以上。官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识，并且已经完全掌握了 React 全家桶的正确开发方式。如果你刚开始学习前端或者 React，将 UI 框架作为你的第一步可能不是最好的主意。
 
@@ -11,7 +11,7 @@ Ant Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ## 第一个例子
 
-这是一个最简单的 Ant Design 组件的在线 codesandbox 演示。
+这是一个最简单的 Hey Design 组件的在线 codesandbox 演示。
 
 <iframe
   src="https://codesandbox.io/embed/antd-reproduction-template-6e93z?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
@@ -100,14 +100,14 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 实际项目开发中，你会需要构建、调试、代理、打包部署等一系列工程化的需求。您可以阅读后面的文档或者使用以下脚手架和范例：
 
-- [Ant Design Pro](http://pro.ant.design/)
+- [Hey Design Pro](http://pro.ant.design/)
 - [antd-admin](https://github.com/zuiidea/antd-admin)
 - [d2-admin](https://github.com/d2-projects/d2-admin)
 - 更多脚手架可以查看 [脚手架市场](http://scaffold.ant.design/)
 
 ## 兼容性
 
-Ant Design React 支持所有的现代浏览器和 IE11+。
+Hey Design React 支持所有的现代浏览器和 IE11+。
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
 | --- | --- | --- | --- | --- | --- |
@@ -115,7 +115,7 @@ Ant Design React 支持所有的现代浏览器和 IE11+。
 
 对于 IE 系列浏览器，需要提供相应的 Polyfill 支持，建议使用 [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env) 来解决浏览器兼容问题。如果你在使用 [umi](http://umijs.org/)，可以直接使用 [targets](https://umijs.org/zh/config/#targets) 配置。
 
-Ant Design 3.0 对 React 15/16 两个版本提供支持，但是我们强烈建议你升级到 React 16，以便获得更好的性能和遇到更少的问题。
+Hey Design 3.0 对 React 15/16 两个版本提供支持，但是我们强烈建议你升级到 React 16，以便获得更好的性能和遇到更少的问题。
 
 #### IE note
 

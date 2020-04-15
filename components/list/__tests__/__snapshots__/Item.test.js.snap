@@ -34,7 +34,7 @@ exports[`List Item Layout horizontal itemLayout List should accept extra node 1`
               <div
                 class="ant-list-item-meta-description"
               >
-                Ant Design, a design language for background applications, is refined by Ant UED Team.
+                Hey Design, a design language for background applications, is refined by Ant UED Team.
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ exports[`List Item Layout should render in RTL direction 1`] = `
               <div
                 class="ant-list-item-meta-description"
               >
-                Ant Design, a design language for background applications, is refined by Ant UED Team.
+                Hey Design, a design language for background applications, is refined by Ant UED Team.
               </div>
             </div>
           </div>

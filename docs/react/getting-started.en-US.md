@@ -3,17 +3,17 @@ order: 2
 title: Getting Started
 ---
 
-Ant Design React is dedicated to providing a **good development experience** for programmers. Make sure that you have installed [Node.js](https://nodejs.org/)(> 8.0.0) correctly.
+Hey Design React is dedicated to providing a **good development experience** for programmers. Make sure that you have installed [Node.js](https://nodejs.org/)(> 8.0.0) correctly.
 
 If you try in local environment, Please refer to [Install and Initialization](https://ant.design/docs/react/use-with-create-react-app#Install-and-Initialization) section of "Use in create-react-app".
 
-> Before delving into Ant Design React, a good knowledge base of [React](https://reactjs.org) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
+> Before delving into Hey Design React, a good knowledge base of [React](https://reactjs.org) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
 
 ---
 
 ## First Example
 
-Here is a simple codesandbox example to show the usage of Ant Design React.
+Here is a simple codesandbox example to show the usage of Hey Design React.
 
 <iframe
   src="https://codesandbox.io/embed/antd-reproduction-template-6e93z?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
@@ -97,14 +97,14 @@ OK! Now you know how to use antd components in a clear way. You are welcome to e
 
 In the real world you will need a development workflow consisting of `compile/build/deploy/lint/debug`. You can find and read articles on the subject or try other scaffolds provided below:
 
-- [Ant Design Pro](http://pro.ant.design/)
+- [Hey Design Pro](http://pro.ant.design/)
 - [antd-admin](https://github.com/zuiidea/antd-admin)
 - [d2-admin](https://github.com/d2-projects/d2-admin)
 - more scaffolds at [Scaffold Market](http://scaffold.ant.design/)
 
 ## Compatibility
 
-Ant Design React supports all modern browsers and IE11+.
+Hey Design React supports all modern browsers and IE11+.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
 | --- | --- | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ Ant Design React supports all modern browsers and IE11+.
 
 Polyfills are needed for IE browsers. We recommend [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env) for it. You can set `targets` config if you are using [umi](http://umijs.org/).
 
-Ant Design 3.0 supports both React 15 and 16 but we strongly suggest React 16 for better performance and fewer bugs.
+Hey Design 3.0 supports both React 15 and 16 but we strongly suggest React 16 for better performance and fewer bugs.
 
 #### IE note
 

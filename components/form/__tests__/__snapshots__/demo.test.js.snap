@@ -1335,7 +1335,7 @@ exports[`renders ./components/form/demo/global-state.md correctly 1`] = `
     "name": [
       "username"
     ],
-    "value": "Ant Design"
+    "value": "Hey Design"
   }
 ]
   </pre>

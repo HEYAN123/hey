@@ -1,3 +1,5 @@
+// 输出组件库
+
 /* eslint no-console:0 */
 function camelCase(name) {
   return name.charAt(0).toUpperCase() + name.slice(1).replace(/-(\w)/g, (m, n) => n.toUpperCase());

@@ -40,7 +40,7 @@ module.exports = {
   htmlTemplate: './site/theme/static/template.html',
   themeConfig: {
     categoryOrder: {
-      'Ant Design': 0,
+      'Hey Design': 0,
       全局样式: 1,
       'Global Styles': 1,
       设计模式: 2,

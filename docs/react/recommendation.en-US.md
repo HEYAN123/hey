@@ -3,7 +3,7 @@ order: 9
 title: Third-Party Libraries
 ---
 
-`antd` is designed to provide high-quality React UI components which follow the Ant Design Specification. So, we are not going to implement other functions which are not relative to `antd`'s target, and recommend using the excellent third-party library which have come from the React community:
+`antd` is designed to provide high-quality React UI components which follow the Hey Design Specification. So, we are not going to implement other functions which are not relative to `antd`'s target, and recommend using the excellent third-party library which have come from the React community:
 
 | Category | Recommended Components |
 | --- | --- |

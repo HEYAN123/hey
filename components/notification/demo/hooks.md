@@ -36,7 +36,7 @@ const Demo = () => {
   };
 
   return (
-    <Context.Provider value={{ name: 'Ant Design' }}>
+    <Context.Provider value={{ name: 'Hey Design' }}>
       {contextHolder}
       <Button type="primary" onClick={() => openNotification('topLeft')}>
         <RadiusUpleftOutlined />

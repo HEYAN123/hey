@@ -56,7 +56,7 @@ const CustomizedForm: React.FC<CustomizedFormProps> = ({ onChange, fields }) => 
 };
 
 const Demo = () => {
-  const [fields, setFields] = useState([{ name: ['username'], value: 'Ant Design' }]);
+  const [fields, setFields] = useState([{ name: ['username'], value: 'Hey Design' }]);
 
   return (
     <div>
