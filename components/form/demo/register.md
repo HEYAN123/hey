@@ -26,7 +26,7 @@ import {
   Checkbox,
   Button,
   AutoComplete,
-} from 'antd';
+} from 'hey-design';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 
 const { Option } = Select;

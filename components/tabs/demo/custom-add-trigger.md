@@ -14,7 +14,7 @@ title:
 Hide default plus icon, and bind event for customized trigger.
 
 ```jsx
-import { Tabs, Button } from 'antd';
+import { Tabs, Button } from 'hey-design';
 
 const { TabPane } = Tabs;
 

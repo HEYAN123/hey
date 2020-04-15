@@ -14,7 +14,7 @@ title:
 Custom field names.
 
 ```jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'hey-design';
 
 const options = [
   {

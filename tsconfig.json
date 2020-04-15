@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "antd": ["components/index.tsx"],
-      "antd/es/*": ["components/*"]
+      "hey-design": ["components/index.tsx"],
+      "hey-design/es/*": ["components/*"]
     },
     "strictNullChecks": true,
     "moduleResolution": "node",

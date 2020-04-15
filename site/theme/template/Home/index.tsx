@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Typography } from 'antd';
+import { Typography } from 'hey-design';
 import Banner from './Banner';
 import RecommendPage from './RecommendPage';
 import Footer from '../Layout/Footer';

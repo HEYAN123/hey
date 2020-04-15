@@ -14,7 +14,7 @@ title:
 Simplest Usage.
 
 ```jsx
-import { Empty } from 'antd';
+import { Empty } from 'hey-design';
 
 ReactDOM.render(<Empty />, mountNode);
 ```

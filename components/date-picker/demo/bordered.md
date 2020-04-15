@@ -14,7 +14,7 @@ title:
 Bordered-less style component.
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'hey-design';
 
 const { RangePicker } = DatePicker;
 

@@ -14,7 +14,7 @@ title:
 Customize Calendar header content.
 
 ```jsx
-import { Calendar, Select, Radio, Col, Row } from 'antd';
+import { Calendar, Select, Radio, Col, Row } from 'hey-design';
 
 const { Group, Button } = Radio;
 

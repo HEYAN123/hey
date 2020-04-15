@@ -14,7 +14,7 @@ title:
 The vertical Slider.
 
 ```jsx
-import { Slider } from 'antd';
+import { Slider } from 'hey-design';
 
 const style = {
   display: 'inline-block',

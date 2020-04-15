@@ -14,7 +14,7 @@ title:
 Disabled a tab.
 
 ```jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'hey-design';
 
 const { TabPane } = Tabs;
 

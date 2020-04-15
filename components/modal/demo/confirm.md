@@ -14,7 +14,7 @@ title:
 Use `confirm()` to show a confirmation modal dialog.
 
 ```jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'hey-design';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 const { confirm } = Modal;

@@ -14,7 +14,7 @@ title:
 Simple table with actions.
 
 ```jsx
-import { Table, Tag } from 'antd';
+import { Table, Tag } from 'hey-design';
 
 const columns = [
   {

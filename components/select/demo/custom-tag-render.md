@@ -14,7 +14,7 @@ title:
 Allows for custom rendering of tags
 
 ```jsx
-import { Select, Tag } from 'antd';
+import { Select, Tag } from 'hey-design';
 
 const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
 

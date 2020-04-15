@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs } from 'antd';
+import { Tabs } from 'hey-design';
 
 const { TabPane } = Tabs;
 

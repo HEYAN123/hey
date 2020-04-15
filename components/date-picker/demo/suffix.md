@@ -15,7 +15,7 @@ title:
 Basic use case. Users can select or input a date in panel.
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'hey-design';
 import { SmileOutlined } from '@ant-design/icons';
 
 const smileIcon = <SmileOutlined />;

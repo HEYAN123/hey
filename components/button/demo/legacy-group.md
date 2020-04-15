@@ -15,7 +15,7 @@ Debug usage
 Debug usage
 
 ```jsx
-import { Button } from 'antd';
+import { Button } from 'hey-design';
 
 function getGroup(props) {
   return (

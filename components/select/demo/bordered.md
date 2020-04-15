@@ -14,7 +14,7 @@ title:
 Bordered-less style component.
 
 ```jsx
-import { Select } from 'antd';
+import { Select } from 'hey-design';
 
 const { Option } = Select;
 

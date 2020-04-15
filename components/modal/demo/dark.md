@@ -15,7 +15,7 @@ debug: true
 Basic modal.
 
 ```jsx
-import { Modal, DatePicker, Slider, Tree, Badge, Collapse, Timeline, Tabs, Anchor, Table, Card, Button, Calendar, Transfer, Switch, Typography, Dropdown } from 'antd';
+import { Modal, DatePicker, Slider, Tree, Badge, Collapse, Timeline, Tabs, Anchor, Table, Card, Button, Calendar, Transfer, Switch, Typography, Dropdown } from 'hey-design';
 import moment from 'moment';
 import difference from 'lodash/difference';
 import { DownOutlined, ClockCircleOutlined } from '@ant-design/icons';

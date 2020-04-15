@@ -15,7 +15,7 @@ title:
 Basic Usage.
 
 ```jsx
-import { Select } from 'antd';
+import { Select } from 'hey-design';
 import { SmileOutlined, MehOutlined } from '@ant-design/icons';
 
 const smileIcon = <SmileOutlined />;

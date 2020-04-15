@@ -14,7 +14,7 @@ title:
 A simple playground for column count and gutter.
 
 ```jsx
-import { Row, Col, Slider } from 'antd';
+import { Row, Col, Slider } from 'hey-design';
 
 class App extends React.Component {
   gutters = {};

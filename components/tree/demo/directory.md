@@ -14,7 +14,7 @@ title:
 Built-in directory tree. `multiple` support `ctrl(Windows)` / `command(Mac)` selection.
 
 ```tsx
-import { Tree } from 'antd';
+import { Tree } from 'hey-design';
 
 const { DirectoryTree } = Tree;
 

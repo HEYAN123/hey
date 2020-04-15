@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Input } from 'antd';
+import { Input } from 'hey-design';
 import classNames from 'classnames';
 import { SearchOutlined } from '@ant-design/icons';
 import { SharedProps } from './interface';

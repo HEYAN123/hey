@@ -14,7 +14,7 @@ title:
 Basic modal.
 
 ```jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'hey-design';
 
 class App extends React.Component {
   state = { visible: false };

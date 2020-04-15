@@ -14,7 +14,7 @@ title:
 Use Drawer to quickly preview details of an object, such as those in a list.
 
 ```jsx
-import { Drawer, List, Avatar, Divider, Col, Row } from 'antd';
+import { Drawer, List, Avatar, Divider, Col, Row } from 'hey-design';
 
 const pStyle = {
   fontSize: 16,

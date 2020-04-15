@@ -14,7 +14,7 @@ title:
 The Drawer can appear from any edge of the screen.
 
 ```jsx
-import { Drawer, Button, Radio } from 'antd';
+import { Drawer, Button, Radio } from 'hey-design';
 
 const RadioGroup = Radio.Group;
 

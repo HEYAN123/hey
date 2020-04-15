@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
-import { Row, Col, Menu, Affix, Tooltip, Avatar } from 'antd';
+import { Row, Col, Menu, Affix, Tooltip, Avatar } from 'hey-design';
 import { injectIntl } from 'react-intl';
 import { ExportOutlined } from '@ant-design/icons';
 import classNames from 'classnames';

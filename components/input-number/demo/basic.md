@@ -14,7 +14,7 @@ title:
 Numeric-only input box.
 
 ```jsx
-import { InputNumber } from 'antd';
+import { InputNumber } from 'hey-design';
 
 function onChange(value) {
   console.log('changed', value);

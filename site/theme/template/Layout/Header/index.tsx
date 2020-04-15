@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import { UnorderedListOutlined } from '@ant-design/icons';
-import { Row, Col, Popover } from 'antd';
+import { Row, Col, Popover } from 'hey-design';
 
 import * as utils from '../../utils';
 import Logo from './Logo';

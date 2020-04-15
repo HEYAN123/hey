@@ -15,7 +15,7 @@ title:
 Cascade selection box for selecting province/city/district.
 
 ```jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'hey-design';
 import { SmileOutlined } from '@ant-design/icons';
 
 const options = [

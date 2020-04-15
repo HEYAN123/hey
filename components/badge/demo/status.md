@@ -14,7 +14,7 @@ title:
 Standalone badge with status.
 
 ```jsx
-import { Badge } from 'antd';
+import { Badge } from 'hey-design';
 
 ReactDOM.render(
   <div>

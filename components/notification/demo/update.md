@@ -14,7 +14,7 @@ title:
 Update content with unique key.
 
 ```jsx
-import { Button, notification } from 'antd';
+import { Button, notification } from 'hey-design';
 
 const key = 'updatable';
 

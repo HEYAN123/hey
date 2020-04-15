@@ -14,7 +14,7 @@ title:
 Tab's position: left, right, top or bottom.
 
 ```jsx
-import { Tabs, Select } from 'antd';
+import { Tabs, Select } from 'hey-design';
 
 const { TabPane } = Tabs;
 const { Option } = Select;

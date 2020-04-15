@@ -36,7 +36,7 @@ If you already set up by [Install and Initialization](https://ant.design/docs/re
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message } from 'hey-design';
 import 'antd/dist/antd.css';
 import './index.css';
 
@@ -73,8 +73,8 @@ You can look up components in the side menu like the [Alert](/components/alert) 
 Click the "Open in Editor" icon in the first example to open an editor with source code to use out-of-the-box. Now you can import the `Alert` component into the codesandbox:
 
 ```diff
-- import { DatePicker, message } from 'antd';
-+ import { DatePicker, message, Alert } from 'antd';
+- import { DatePicker, message } from 'hey-design';
++ import { DatePicker, message, Alert } from 'hey-design';
 ```
 
 Add the following jsx into the `render` function.
@@ -130,7 +130,7 @@ There are some [scaffolds](http://scaffold.ant.design/) which have already integ
 
 ## Import on Demand
 
-If you see logs like in the screenshot below, you might be importing all components by writing `import { Button } from 'antd';`. This will affect your app's network performance.
+If you see logs like in the screenshot below, you might be importing all components by writing `import { Button } from 'hey-design';`. This will affect your app's network performance.
 
 ```
 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
@@ -145,12 +145,12 @@ import Button from 'antd/es/button';
 import 'antd/es/button/style'; // or antd/es/button/style/css for css format file
 ```
 
-> Note: antd supports ES6 tree shaking, so `import { Button } from 'antd';` will drop the js code you don't use too.
+> Note: antd supports ES6 tree shaking, so `import { Button } from 'hey-design';` will drop the js code you don't use too.
 
 We strongly recommend using [babel-plugin-import](https://github.com/ant-design/babel-plugin-import), which can convert the following code to the 'antd/es/xxx' way:
 
 ```jsx
-import { Button } from 'antd';
+import { Button } from 'hey-design';
 ```
 
 And this plugin can load styles too. Read [usage](https://github.com/ant-design/babel-plugin-import#usage) for more details.
