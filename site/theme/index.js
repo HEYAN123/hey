@@ -1,35 +1,33 @@
-const path = require("path");
+const path = require('path');
 
-const homeTmpl = "./template/Home/index";
-const contentTmpl = "./template/Content/index";
-const resourcesTmpl = "./template/Resources/index";
+const homeTmpl = './template/Home/index';
+const contentTmpl = './template/Content/index';
+const appShellTmpl = './template/AppShell';
 
-// function pickerGenerator(module) {
-//   const tester = new RegExp(`^docs/${module}`);
-//   return markdownData => {
-//     const { filename } = markdownData.meta;
-//     if (tester.test(filename) && !/\/demo$/.test(path.dirname(filename))) {
-//       return {
-//         meta: markdownData.meta,
-//       };
-//     }
-//     return null;
-//   };
-// }
+function pickerGenerator(module) {
+  const tester = new RegExp(`^docs/${module}`);
+  return markdownData => {
+    const { filename } = markdownData.meta;
+    if (tester.test(filename) && !/\/demo$/.test(path.dirname(filename))) {
+      return {
+        meta: markdownData.meta,
+      };
+    }
+    return null;
+  };
+}
 
 module.exports = {
-  // ❓会更新不断
-  // lazyLoad(nodePath, nodeValue) {
-  //   if (typeof nodeValue === "string") {
-  //     return true;
-  //   }
-  //   console.log("node", nodePath);
-  //   return nodePath.endsWith("/demo");
-  // },
+  lazyLoad(nodePath, nodeValue) {
+    if (typeof nodeValue === 'string') {
+      return true;
+    }
+    return nodePath.endsWith('/demo');
+  },
   pick: {
     components(markdownData) {
       const { filename } = markdownData.meta;
-      if (!/^library/.test(filename) || /[/\\]demo$/.test(path.dirname(filename))) {
+      if (!/^components/.test(filename) || /[/\\]demo$/.test(path.dirname(filename))) {
         return null;
       }
       return {
@@ -44,33 +42,50 @@ module.exports = {
       }
       return null;
     },
-    // "docs/react": pickerGenerator("react"),
-    // "docs/spec": pickerGenerator("spec"),
+    'docs/react': pickerGenerator('react'),
   },
   plugins: [
-    "bisheng-plugin-description",
-    "bisheng-plugin-toc?maxDepth=2&keepElem",
-    "@ant-design/bisheng-plugin?injectProvider",
-    "bisheng-plugin-react?lang=__react",
+    'bisheng-plugin-description',
+    'bisheng-plugin-toc?maxDepth=2&keepElem',
+    '@ant-design/bisheng-plugin?injectProvider',
+    'bisheng-plugin-react?lang=__react',
   ],
   routes: {
-    path: "/",
-    component: "./template/Layout/index",
+    path: '/',
+    component: './template/Layout/index',
     indexRoute: { component: homeTmpl },
     childRoutes: [
-      // 首页
       {
-        path: "index-cn",
+        path: 'app-shell',
+        component: appShellTmpl,
+      },
+      {
+        path: 'index-cn',
         component: homeTmpl,
       },
-      // 组件路由
       {
-        path: "components/:children/",
+        path: 'docs/react/:children',
         component: contentTmpl,
       },
       {
-        path: "library/resources-cn",
-        component: resourcesTmpl,
+        path: 'changelog',
+        component: contentTmpl,
+      },
+      {
+        path: 'changelog-cn',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/form/v3',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/form/v3-cn',
+        component: contentTmpl,
+      },
+      {
+        path: 'components/:children/',
+        component: contentTmpl,
       },
     ],
   },
