@@ -49,7 +49,7 @@ export const sortGradient = (gradients: StringGradients) => {
  * Besides women, there is the code.
  */
 export const handleGradient = (strokeColor: ProgressGradient) => {
-  const { from = '#667387', to = '#667387', direction = 'to right', ...rest } = strokeColor;
+  const { from = '#3f5965', to = '#3f5965', direction = 'to right', ...rest } = strokeColor;
   if (Object.keys(rest).length !== 0) {
     const sortedGradients = sortGradient(rest as StringGradients);
     return { backgroundImage: `linear-gradient(${direction}, ${sortedGradients})` };

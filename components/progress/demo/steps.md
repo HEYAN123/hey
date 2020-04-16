@@ -18,11 +18,11 @@ import { Progress } from 'hey-design';
 
 ReactDOM.render(
   <div>
-    <Progress percent={50} steps={3} strokeColor="#667387" />
+    <Progress percent={50} steps={3} strokeColor="#3f5965" />
     <br />
-    <Progress percent={30} steps={5} strokeColor="#667387" />
+    <Progress percent={30} steps={5} strokeColor="#3f5965" />
     <br />
-    <Progress percent={100} steps={5} size="small" strokeColor="#667387" />
+    <Progress percent={100} steps={5} size="small" strokeColor="#3f5965" />
   </div>,
   mountNode,
 );
