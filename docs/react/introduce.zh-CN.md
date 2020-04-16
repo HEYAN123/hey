@@ -59,6 +59,6 @@ title: Hey Design of React
 
 - hey-design组件库使用js的超集——TypeScript语言进行开发，保证了参数类型的正确性和代码的严谨。
 
-### [JSS](https://cssinjs.org/setup/?v=v10.1.1)
+### [JSS](https://cssinjs.org/?v=v10.1.1)
 
 - hey-design组件库的内置样式使用JSS编写，它使用 JavaScript 以声明和可维护的方式描述样式。

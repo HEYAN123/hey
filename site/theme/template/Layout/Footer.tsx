@@ -1,13 +1,14 @@
 // 页脚
 
 import React from 'react';
+import { Footer as OrgFooter } from 'hey-design';
 // import RcFooter from 'rc-footer'; OWN
 
 function Footer() {
     return (
-          <p>
-            Made with <span style={{ color: '#000' }}>❤</span> by He Yan
-          </p>
+      <OrgFooter className="footer">
+        <p>Made with <span style={{ color: 'rgb(0, 0, 0)' }}>❤</span> by He Yan</p>
+      </OrgFooter>
     );
 }
 

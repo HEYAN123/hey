@@ -18,10 +18,7 @@ import { Button } from 'hey-design';
 
 ReactDOM.render(
   <div>
-    <Button type="primary">Primary</Button>
-    <Button>Default</Button>
-    <Button type="dashed">Dashed</Button>
-    <Button type="link">Link</Button>
+    <Button>Primary</Button>
   </div>,
   mountNode,
 );

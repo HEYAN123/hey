@@ -116,7 +116,7 @@ ReactDOM.render(<SiderDemo />, mountNode);
 }
 
 #components-layout-demo-custom-trigger .trigger:hover {
-  color: #667387;
+  color: #3f5965;
 }
 
 #components-layout-demo-custom-trigger .logo {

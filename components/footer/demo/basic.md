@@ -7,22 +7,39 @@ title:
 
 ## zh-CN
 
-按钮有四种类型：主按钮、次按钮、虚线按钮和链接按钮。主按钮在同一个操作区域最多出现一次。
+当内容高度小于窗口高度时页脚位于窗口底部；当内容高度大于窗口高度时页脚位于内容尾部。
 
 ## en-US
 
-There are `primary` button, `default` button, `dashed` button and `link` button in antd.
+The most basic dropdown menu.
 
 ```jsx
-import { Button } from 'hey-design';
+import { Footer } from 'hey-design';
 
 ReactDOM.render(
-  <div>
-    <Button type="primary">Primary</Button>
-    <Button>Default</Button>
-    <Button type="dashed">Dashed</Button>
-    <Button type="link">Link</Button>
+  <div className="page">
+    <div className="content">
+      内容内容
+    </div>
+    <Footer className="myfooter">
+      <p>hello world~</p>
+    </Footer>
   </div>,
   mountNode,
 );
+```
+
+```css
+.page {
+  width: 100%;
+  height: 300px;
+}
+.content {
+  min-height: 100%;
+  margin-bottom: -50px;
+  background: #eee;
+}
+.myfooter {
+  background: #ddd;
+}
 ```

@@ -24,7 +24,7 @@ ReactDOM.render(
       dateRender={current => {
         const style = {};
         if (current.date() === 1) {
-          style.border = '1px solid #667387';
+          style.border = '1px solid #3f5965';
           style.borderRadius = '50%';
         }
         return (
@@ -38,7 +38,7 @@ ReactDOM.render(
       dateRender={current => {
         const style = {};
         if (current.date() === 1) {
-          style.border = '1px solid #667387';
+          style.border = '1px solid #3f5965';
           style.borderRadius = '50%';
         }
         return (

@@ -1,7 +1,7 @@
 ---
 category: Components
 type: 布局
-title: footer
+title: Footer
 subtitle: 页脚
 ---
 
@@ -10,6 +10,18 @@ subtitle: 页脚
 ## 何时使用
 
 - 需要展示网站相关信息时
+
+## 最佳实践
+
+- 始终用一个容器将内容块和Footer装在一起
+- 为内容模块增加如下css属性
+
+```xml
+<div>
+  <content style="min-height:100%;margin-bottom:-50px;">内容区域</content>
+  <Footer>footer</Footer>
+<div>
+```
 
 ## API
 
