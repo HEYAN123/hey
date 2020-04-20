@@ -4,6 +4,9 @@ const homeTmpl = './template/Home/index';
 const contentTmpl = './template/Content/index';
 const appShellTmpl = './template/AppShell';
 
+// gitpages前缀
+const preUrl = '/hey';
+
 function pickerGenerator(module) {
   const tester = new RegExp(`^docs/${module}`);
   return markdownData => {
@@ -51,40 +54,40 @@ module.exports = {
     'bisheng-plugin-react?lang=__react',
   ],
   routes: {
-    path: '/hey',
+    path: '/',
     component: './template/Layout/index',
     indexRoute: { component: homeTmpl },
     childRoutes: [
       {
-        path: '/app-shell',
+        path: `${preUrl}/app-shell`,
         component: appShellTmpl,
       },
       {
-        path: '/index-cn',
+        path: `${preUrl}/index-cn`,
         component: homeTmpl,
       },
       {
-        path: '/docs/react/:children',
+        path: `${preUrl}/docs/react/:children`,
         component: contentTmpl,
       },
       {
-        path: '/changelog',
+        path: `${preUrl}/changelog`,
         component: contentTmpl,
       },
       {
-        path: '/changelog-cn',
+        path: `${preUrl}/changelog-cn`,
         component: contentTmpl,
       },
       {
-        path: '/components/form/v3',
+        path: `${preUrl}/components/form/v3`,
         component: contentTmpl,
       },
       {
-        path: '/components/form/v3-cn',
+        path: `${preUrl}/components/form/v3-cn`,
         component: contentTmpl,
       },
       {
-        path: '/components/:children/',
+        path: `${preUrl}/components/:children/`,
         component: contentTmpl,
       },
     ],
