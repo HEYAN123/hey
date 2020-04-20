@@ -11,14 +11,12 @@
       type="image/x-icon"
     />
     
-    <link rel="stylesheet" type="text/css" href="/hey/index-429d3f45.css" />
-    
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="/hey/color.less" />
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -44,8 +42,8 @@
           console.log(path);
           // 路由是不是以“/”开始的，如果是就取path本身，否则取/+path
           var pathname = path.startsWith('/') ? path : '/' + path;
-          if (pathname === '/') {
-            return '/index-cn';
+          if (pathname === '/hey/' || pathname === '/') {
+            return 'hey/index-cn';
           } else if (pathname.endsWith('/')) {
             return pathname.replace(/\/$/, '-cn/');
           }
@@ -53,7 +51,7 @@
         }
 
         // 如果访问首页
-        if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
+        if (isLocalStorageNameSupported() && (pathname === '/hey/' || pathname === '/hey/index-cn')) {
           var lang = 'zh-CN';
           // safari is 'zh-cn', while other browser is 'zh-CN';
           if (!isZhCN(pathname)) {
@@ -69,7 +67,7 @@
       
     </div>
     
-    <script src="/hey/index-16d62989.js"></script>
+    <script src="/index.js"></script>
     
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>

@@ -11,14 +11,14 @@
       type="image/x-icon"
     />
     {% for cssFile in manifest["css"] %}
-    <link rel="stylesheet" type="text/css" href="{{ root }}hey/{{ cssFile }}" />
+    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
     {% endfor %}
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" />
+    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -44,8 +44,8 @@
           console.log(path);
           // 路由是不是以“/”开始的，如果是就取path本身，否则取/+path
           var pathname = path.startsWith('/') ? path : '/' + path;
-          if (pathname === '/') {
-            return '/index-cn';
+          if (pathname === '/hey/' || pathname === '/') {
+            return 'hey/index-cn';
           } else if (pathname.endsWith('/')) {
             return pathname.replace(/\/$/, '-cn/');
           }
@@ -53,7 +53,7 @@
         }
 
         // 如果访问首页
-        if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
+        if (isLocalStorageNameSupported() && (pathname === '/hey/' || pathname === '/hey/index-cn')) {
           var lang = 'zh-CN';
           // safari is 'zh-cn', while other browser is 'zh-CN';
           if (!isZhCN(pathname)) {
@@ -69,7 +69,7 @@
       {{ content | safe }}
     </div>
     {% for jsFile in manifest["js"] %}
-    <script src="{{ root }}hey/{{ jsFile }}"></script>
+    <script src="{{ root }}{{ jsFile }}"></script>
     {% endfor %}
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>

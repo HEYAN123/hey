@@ -63,11 +63,11 @@ module.exports = {
         component: homeTmpl,
       },
       {
-        path: `${preUrl}/app-shell`,
-        component: appShellTmpl,
+        path: `${preUrl}/docs/react/:children`,
+        component: contentTmpl,
       },
       {
-        path: `${preUrl}/docs/react/:children`,
+        path: `${preUrl}/components/:children`,
         component: contentTmpl,
       },
       {
@@ -87,8 +87,8 @@ module.exports = {
         component: contentTmpl,
       },
       {
-        path: `${preUrl}/components/:children`,
-        component: contentTmpl,
+        path: `${preUrl}/app-shell`,
+        component: appShellTmpl,
       },
     ],
   },
