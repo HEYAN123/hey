@@ -16,5 +16,15 @@ npm run deploy
 - 开发环境启动
 
 ```bash
-npm run start
+npm start
+```
+
+- 本地测试启动注意事项
+
+- 删除site/theme/static/template.html中文件引用url里的“hey/”.写这个是为了匹配git pages路由
+
+- 浏览器访问
+
+```bash
+localhost:8003/hey/
 ```

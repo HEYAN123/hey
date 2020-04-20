@@ -19,12 +19,12 @@ const { SubMenu } = Menu;
 
 function getModuleData(props) {
   const { pathname } = props.location;
-  const moduleName = /^\/?components/.test(pathname)
+  const moduleName = /^hey\/?components/.test(pathname)
     ? 'components'
     : pathname
         .split('/')
         .filter(item => item)
-        .slice(0, 2)
+        .slice(1, 3)
         .join('/');
   const excludedSuffix = utils.isZhCN(props.location.pathname) ? 'en-US.md' : 'zh-CN.md';
   let data;
@@ -230,11 +230,11 @@ class MainContent extends Component {
           </span>,
         ];
     const { disabled } = item;
-    const url = item.filename.replace(/(\/index)?((\.zh-CN)|(\.en-US))?\.md$/i, '').toLowerCase();
+    const url = `hey/${item.filename.replace(/(\/index)?((\.zh-CN)|(\.en-US))?\.md$/i, '').toLowerCase()}`;
     const child = !item.link ? (
       <Link
         to={utils.getLocalizedPathname(
-          /^components/.test(url) ? `${url}/` : url,
+          /^hey\/components/.test(url) ? `${url}/` : url,
           locale === 'zh-CN',
         )}
         disabled={disabled}

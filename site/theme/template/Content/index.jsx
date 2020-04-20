@@ -9,6 +9,7 @@ function isChangelog(pathname) {
 export default collect(async nextProps => {
   const { pathname } = nextProps.location;
   const pageDataPath = pathname.replace('-cn', '').split('/');
+  pageDataPath.splice(0, 1);
   const pageData = isChangelog(pathname)
     ? nextProps.data.changelog.CHANGELOG
     : nextProps.utils.get(nextProps.data, pageDataPath);

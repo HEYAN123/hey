@@ -219,10 +219,6 @@ export default class Layout extends React.Component {
           <Helmet encodeSpecialCharacters={false}>
             <html lang={appLocale.locale === 'zh-CN' ? 'zh' : 'en'} data-direction={direction} />
             <title>{title}</title>
-            {/* <link
-              rel="apple-touch-icon-precomposed"
-              sizes="144x144"
-            /> */}
             <meta name="description" content={description} />
             <meta property="og:title" content={title} />
             <meta property="og:type" content="website" />

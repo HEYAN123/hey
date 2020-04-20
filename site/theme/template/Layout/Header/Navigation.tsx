@@ -67,12 +67,12 @@ export default ({
       selectedKeys={[activeMenuItem]}
       id="nav"
     >
-      <Menu.Item key="docs/react">
+      <Menu.Item key="hey/docs/react">
         <Link to={utils.getLocalizedPathname('hey/docs/react/introduce', isZhCN)}>
           <FormattedMessage id="app.header.menu.documentation" />
         </Link>
       </Menu.Item>
-      <Menu.Item key="components">
+      <Menu.Item key="hey/components">
         <Link to={utils.getLocalizedPathname('hey/components/button/', isZhCN)}>
           <FormattedMessage id="app.header.menu.components" />
         </Link>
