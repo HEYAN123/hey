@@ -38,7 +38,7 @@ export default function NotFound(props: NotFoundProps) {
             isZhCN ? '你访问的页面貌似不存在？' : 'Sorry, the page you visited does not exist.'
           }
           extra={
-            <Link to={utils.getLocalizedPathname('/', isZhCN)}>
+            <Link to={utils.getLocalizedPathname('/hey/index', isZhCN)}>
               <Button type="primary" icon={<HomeOutlined />}>
                 {isZhCN ? '返回 Hey Design 首页' : 'Back to home page'}
               </Button>

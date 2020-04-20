@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{ htmlAttributes | safe }}>
+<html >
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,19 +10,15 @@
       href="https://hey-design.oss-cn-beijing.aliyuncs.com/icon.png"
       type="image/x-icon"
     />
-    {% for cssFile in manifest["css"] %}
-    <!-- gitpages -->
-    <!-- <link rel="stylesheet" type="text/css" href="{{ root }}hey/{{ cssFile }}" /> -->
-    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
-    {% endfor %}
+    
+    <link rel="stylesheet" type="text/css" href="/index-429d3f45.css" />
+    
     <style id="nprogress-style">
       #nprogress {
         display: none;
       }
     </style>
-    <!-- gitpages -->
-    <!-- <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" /> -->
-    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
+    <link rel="stylesheet/less" type="text/css" href="/color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -70,13 +66,11 @@
   </head>
   <body>
     <div id="react-content">
-      {{ content | safe }}
+      
     </div>
-    {% for jsFile in manifest["js"] %}
-    <!-- gitpages -->
-    <!-- <script src="{{ root }}hey/{{ jsFile }}"></script> -->
-    <script src="{{ root }}{{ jsFile }}"></script>
-    {% endfor %}
+    
+    <script src="/index-f3f00c1d.js"></script>
+    
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
     <script>
