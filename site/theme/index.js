@@ -59,12 +59,12 @@ module.exports = {
     indexRoute: { component: homeTmpl },
     childRoutes: [
       {
-        path: `${preUrl}/app-shell`,
-        component: appShellTmpl,
-      },
-      {
         path: `${preUrl}/index-cn`,
         component: homeTmpl,
+      },
+      {
+        path: `${preUrl}/app-shell`,
+        component: appShellTmpl,
       },
       {
         path: `${preUrl}/docs/react/:children`,
@@ -87,7 +87,7 @@ module.exports = {
         component: contentTmpl,
       },
       {
-        path: `${preUrl}/components/:children/`,
+        path: `${preUrl}/components/:children`,
         component: contentTmpl,
       },
     ],
