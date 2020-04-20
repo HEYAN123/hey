@@ -56,35 +56,35 @@ module.exports = {
     indexRoute: { component: homeTmpl },
     childRoutes: [
       {
-        path: 'app-shell',
+        path: '/app-shell',
         component: appShellTmpl,
       },
       {
-        path: 'index-cn',
+        path: '/index-cn',
         component: homeTmpl,
       },
       {
-        path: 'docs/react/:children',
+        path: '/docs/react/:children',
         component: contentTmpl,
       },
       {
-        path: 'changelog',
+        path: '/changelog',
         component: contentTmpl,
       },
       {
-        path: 'changelog-cn',
+        path: '/changelog-cn',
         component: contentTmpl,
       },
       {
-        path: 'components/form/v3',
+        path: '/components/form/v3',
         component: contentTmpl,
       },
       {
-        path: 'components/form/v3-cn',
+        path: '/components/form/v3-cn',
         component: contentTmpl,
       },
       {
-        path: 'components/:children/',
+        path: '/components/:children/',
         component: contentTmpl,
       },
     ],

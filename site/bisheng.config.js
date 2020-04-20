@@ -32,8 +32,7 @@ module.exports = {
   source: {
     components: './components',
     docs: './docs',
-    changelog: ['CHANGELOG.zh-CN.md', 'CHANGELOG.en-US.md'],
-    'components/form/v3': ['components/form/v3.zh-CN.md', 'components/form/v3.en-US.md'],
+    changelog: ['CHANGELOG.zh-CN.md'],
   },
   theme: './site/theme',
   htmlTemplate: './site/theme/static/template.html',
@@ -76,19 +75,10 @@ module.exports = {
       模板文档: 3,
       'Template Document': 3,
     },
-    docVersions: {
-      '3.x': 'http://3x.ant.design',
-      '2.x': 'http://2x.ant.design',
-      '1.x': 'http://1x.ant.design',
-      '0.12.x': 'http://012x.ant.design',
-      '0.11.x': 'http://011x.ant.design',
-      '0.10.x': 'http://010x.ant.design',
-      '0.9.x': 'http://09x.ant.design',
-    },
   },
   filePathMapper(filePath) {
     if (filePath === '/index.html') {
-      return ['/index.html', '/index-cn.html'];
+      return ['/index-cn.html', '/index.html'];
     }
     if (filePath.endsWith('/index.html')) {
       return [filePath, filePath.replace(/\/index\.html$/, '-cn/index.html')];
