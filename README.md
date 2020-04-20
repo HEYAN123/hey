@@ -1,5 +1,5 @@
 # Hey Design
 
-## 组件
+## gh-pages
 
-- Footer 页脚
+- 静态网站发布分支
