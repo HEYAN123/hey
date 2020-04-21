@@ -12,8 +12,8 @@
     />
     {% for cssFile in manifest["css"] %}
     <!-- gitpages -->
-    <!-- <link rel="stylesheet" type="text/css" href="{{ root }}hey/{{ cssFile }}" /> -->
-    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
+    <link rel="stylesheet" type="text/css" href="{{ root }}hey/{{ cssFile }}" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" /> -->
     {% endfor %}
     <style id="nprogress-style">
       #nprogress {
@@ -21,8 +21,8 @@
       }
     </style>
     <!-- gitpages -->
-    <!-- <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" /> -->
-    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
+    <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" /> -->
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
@@ -74,21 +74,8 @@
     </div>
     {% for jsFile in manifest["js"] %}
     <!-- gitpages -->
-    <!-- <script src="{{ root }}hey/{{ jsFile }}"></script> -->
-    <script src="{{ root }}{{ jsFile }}"></script>
+    <script src="{{ root }}hey/{{ jsFile }}"></script>
+    <!-- <script src="{{ root }}{{ jsFile }}"></script> -->
     {% endfor %}
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>
-    <script>
-      if (!location.port) {
-        // Enable Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-72788897-1');
-      }
-    </script>
   </body>
 </html>
