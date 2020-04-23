@@ -1,6 +1,6 @@
 ---
 category: Components
-type: 通用
+type: 原生二次开发
 title: Button
 subtitle: 按钮
 ---
