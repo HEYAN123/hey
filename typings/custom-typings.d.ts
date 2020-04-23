@@ -8,6 +8,10 @@ declare module '*.svg' {
   export default src;
 }
 
+declare module 'webpack-bundle-analyzer';
+
+declare module 'mini-css-extract-plugin';
+
 declare module 'bisheng/collect';
 
 declare module 'bisheng/router';
