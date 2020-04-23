@@ -18,9 +18,12 @@
         display: none;
       }
     </style>
+    {% if isDev %}
+      <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
+    {% else %}
+      <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" />
+    {% endif %}
     <!-- gitpages -->
-    <!-- <link rel="stylesheet/less" type="text/css" href="{{ root }}hey/color.less" /> -->
-    <link rel="stylesheet/less" type="text/css" href="{{ root }}color.less" />
     <script src="https://polyfill.alicdn.com/polyfill.min.js?features=default,es2015,Intl"></script>
     <script>
       (function() {
