@@ -3,7 +3,7 @@ order: 0
 title: Hey Design of React
 ---
 
-`hey-design` 是基于Ant Design设计语言，react框架的前端组件库，主要用于开发样式定制化程度高的前台产品。
+`hey-design` 是基于Ant Design设计语言规范，react框架的前端组件库，主要用于开发样式定制化程度高的前台产品。
 
 <div class="pic-plus">
   <img width="150" src="https://hey-design.oss-cn-beijing.aliyuncs.com/icon.png"/>

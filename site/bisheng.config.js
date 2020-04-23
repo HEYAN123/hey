@@ -125,6 +125,9 @@ module.exports = {
     }
 
     if (isDev) {
+      config.externals = {
+        'react-router-dom': 'ReactRouterDOM',
+      };
       // eslint-disable-next-line
       config.devtool = 'source-map';
 
