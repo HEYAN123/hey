@@ -11,9 +11,7 @@
       type="image/x-icon"
     />
     {% for cssFile in manifest["css"] %}
-    <!-- gitpages -->
-    <link rel="stylesheet" type="text/css" href="{{ root }}hey/{{ cssFile }}" />
-    <!-- <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ root }}{{ cssFile }}" />
     {% endfor %}
     <style id="nprogress-style">
       #nprogress {
@@ -70,12 +68,16 @@
   </head>
   <body>
     <div id="react-content">
+      {% if isDev %}
+      {% else %}
+      <!-- react & react-dom -->
+      <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+      {% endif %}
       {{ content | safe }}
     </div>
     {% for jsFile in manifest["js"] %}
-    <!-- gitpages -->
-    <script src="{{ root }}hey/{{ jsFile }}"></script>
-    <!-- <script src="{{ root }}{{ jsFile }}"></script> -->
+    <script src="{{ root }}{{ jsFile }}"></script>
     {% endfor %}
   </body>
 </html>

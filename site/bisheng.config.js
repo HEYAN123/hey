@@ -1,6 +1,8 @@
 const path = require('path');
 const replaceLib = require('@ant-design/tools/lib/replaceLib');
 const getWebpackConfig = require('@ant-design/tools/lib/getWebpackConfig');
+const _miniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const { version } = require('../package.json');
 
 const { webpack } = getWebpackConfig;
@@ -108,6 +110,8 @@ module.exports = {
     // eslint-disable-next-line
     config.externals = {
       'react-router-dom': 'ReactRouterDOM',
+      'react': 'React',
+      'react-dom': 'ReactDOM',
     };
 
     if (usePreact) {
@@ -127,6 +131,10 @@ module.exports = {
       // Resolve use react hook fail when yarn link or npm link
       // https://github.com/webpack/webpack/issues/8607#issuecomment-453068938
       config.resolve.alias = { ...config.resolve.alias, react: require.resolve('react') };
+      // 包分析
+      config.plugins.push(new BundleAnalyzerPlugin({
+        analyzerPort: 8004,
+      }));
     }
 
     alertBabelConfig(config.module.rules);
@@ -139,6 +147,13 @@ module.exports = {
 
     // 修改打包后依赖文件名
     config.output.chunkFilename = 'hey/[name]-[contenthash:8].js';
+    config.output.filename = 'hey/[name].js';
+    // 修改打包后css文件名
+    config.plugins.push(
+      new _miniCssExtractPlugin({
+        filename: 'hey/[name]-[contenthash:8].css',
+      }),
+    )
 
     config.plugins.push(
       new webpack.DefinePlugin({
