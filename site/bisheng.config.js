@@ -137,6 +137,9 @@ module.exports = {
       type: 'javascript/auto',
     });
 
+    // 修改打包后依赖文件名
+    config.output.chunkFilename = 'hey/[name]-[contenthash:8].js';
+
     config.plugins.push(
       new webpack.DefinePlugin({
         antdReproduceVersion: JSON.stringify(version),
