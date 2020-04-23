@@ -52,7 +52,7 @@ module.exports = {
     },
     typeOrder: {
       // Component
-      General: 0,
+      'Original Elements developed': 0,
       Layout: 1,
       Navigation: 2,
       'Data Entry': 3,
@@ -60,7 +60,7 @@ module.exports = {
       Feedback: 5,
       Other: 6,
       Deprecated: 7,
-      通用: 0,
+      原生二次开发: 0,
       布局: 1,
       导航: 2,
       数据录入: 3,

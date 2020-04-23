@@ -1,7 +1,7 @@
 ---
 category: Components
 subtitle: 排版
-type: 通用
+type: 原生二次开发
 title: Typography
 cols: 1
 ---
