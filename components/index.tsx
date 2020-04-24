@@ -16,6 +16,8 @@ if (
 }
 /* @remove-on-es-build-end */
 
+export { default as Div } from './div';
+
 export { default as Footer } from './footer';
 
 export { default as Affix } from './affix';
@@ -37,8 +39,6 @@ export { default as Breadcrumb } from './breadcrumb';
 export { default as Button } from './button';
 
 export { default as Calendar } from './calendar';
-
-export { default as Card } from './card';
 
 export { default as Collapse } from './collapse';
 
@@ -135,8 +135,6 @@ export { default as TimePicker } from './time-picker';
 export { default as Timeline } from './timeline';
 
 export { default as Tooltip } from './tooltip';
-
-export { default as Typography } from './typography';
 
 export { default as Upload } from './upload';
 

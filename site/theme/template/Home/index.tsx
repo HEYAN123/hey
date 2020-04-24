@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Typography } from 'hey-design';
 import Banner from './Banner';
 import RecommendPage from './RecommendPage';
 import Footer from '../Layout/Footer';
 import './index.less';
-
-const { Title } = Typography;
 
 function getStyle() {
   return `
@@ -29,11 +26,11 @@ interface BlockContentProps {
 
 const BlockContent: React.FC<BlockContentProps> = ({ title, children, extra }) => (
   <div className="home-block-content">
-    <Title level={2} style={{ fontWeight: 'lighter', color: '#314659' }}>
+    <div style={{ fontWeight: 'lighter', color: '#314659' }}>
       {title}
 
       {extra && <div className="home-block-content-extra">{extra}</div>}
-    </Title>
+    </div>
     {children}
   </div>
 );

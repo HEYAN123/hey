@@ -131,7 +131,7 @@ class ComponentDoc extends React.Component {
       );
     });
 
-    const { title, subtitle, filename } = meta;
+    const { title, subtitle } = meta;
     const articleClassName = classNames({
       'show-riddle-button': showRiddleButton,
     });
@@ -197,8 +197,8 @@ class ComponentDoc extends React.Component {
         </section>
         <Row gutter={16}>
           <Col
-            span={isSingleCol ? 24 : 12}
-            className={isSingleCol ? 'code-boxes-col-1-1' : 'code-boxes-col-2-1'}
+            span={24}
+            className="code-boxes-col-1-1"
           >
             {leftChildren}
           </Col>
