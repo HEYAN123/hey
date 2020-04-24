@@ -34,8 +34,6 @@ export { default as BackTop } from './back-top';
 
 export { default as Badge } from './badge';
 
-export { default as Breadcrumb } from './breadcrumb';
-
 export { default as Button } from './button';
 
 export { default as Calendar } from './calendar';
@@ -88,8 +86,6 @@ export { default as Statistic } from './statistic';
 
 export { default as notification } from './notification';
 
-export { default as PageHeader } from './page-header';
-
 export { default as Pagination } from './pagination';
 
 export { default as Popconfirm } from './popconfirm';
@@ -114,11 +110,7 @@ export { default as Slider } from './slider';
 
 export { default as Spin } from './spin';
 
-export { default as Steps } from './steps';
-
 export { default as Switch } from './switch';
-
-export { default as Table } from './table';
 
 export { default as Transfer } from './transfer';
 
