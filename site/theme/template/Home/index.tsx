@@ -26,9 +26,8 @@ interface BlockContentProps {
 
 const BlockContent: React.FC<BlockContentProps> = ({ title, children, extra }) => (
   <div className="home-block-content">
-    <div style={{ fontWeight: 'lighter', color: '#314659' }}>
-      {title}
-
+    <div>
+      <p className="special">{title}</p>
       {extra && <div className="home-block-content-extra">{extra}</div>}
     </div>
     {children}
