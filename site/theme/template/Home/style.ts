@@ -15,6 +15,8 @@ const styles = {
     `,
     'item-pic': `
       font-size: 100px;
+      padding-left: 8px;
+      margin-left: 10px;
     `,
     'item-content': `
       flex-direction: column;
@@ -24,7 +26,7 @@ const styles = {
       font-size: 22px;
       font-weight: ${primary_font_weight};
       margin: 10px 0;
-      padding: 0;
+      padding: 10px 0 0;
     `,
     'item-content-text': `
       font-size: ${primary_font_size}
