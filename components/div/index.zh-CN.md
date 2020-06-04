@@ -17,7 +17,7 @@ subtitle: 块元素
 
 - `正常显示`：正常展示数据
 - `数据获取中`：当块元素需要等待数据响应时候，经常需要插入类似骨架屏的loading中间态占位显示。
-- `获取失败`：当数据请求失败时候显示重新请求接口的交互入口。
+- `获取失败`：当数据请求失败时候显示加载失败或进行局部接口刷新的交互入口。
 
 ## 样式
 
@@ -28,6 +28,9 @@ subtitle: 块元素
 
 | 属性 | 说明 | 参数类型 | 默认值 |
 | --- | --- | --- | --- | --- |
-| status | 要显示的数据状态， | `success` \| `fail` \| `loading` | `success` |
-| className | 正常显示时的样式类名， | string | - |
-| className | 正常显示时的样式类名， | string | - |
+| status | 块内的数据状态，三种状态值分别表示正常、请求失败、加载中 | false \| `fail` \| `loading` | false |
+| className | 块元素的样式类名 | string | - |
+| failContent | 加载失败时显示的提示内容 | ReactComponent | - |
+| loadingContent | 加载中时显示的loading内容 | ReactComponent | - |
+| handleLoad | 请求数据的方法，会绑定在加载失败时重新请求的按钮上 | Function | - |
+| handleClick | Div组件点击事件触发的回调函数 | Function | - |
