@@ -29,7 +29,6 @@ import {
   Modal,
   Button,
   Pagination,
-  Steps,
   Rate,
   Badge,
   Divider,
@@ -50,7 +49,6 @@ const ButtonGroup = Button.Group;
 const { Option } = Select;
 const { TreeNode } = Tree;
 const { Search } = Input;
-const { Step } = Steps;
 
 const cascaderOptions = [
   {
@@ -413,17 +411,7 @@ class Page extends React.Component {
               <Col span={24}>
                 <Divider orientation="left">Steps example</Divider>
                 <div>
-                  <Steps progressDot current={currentStep}>
-                    <Step title="Finished" description="This is a description." />
-                    <Step title="In Progress" description="This is a description." />
-                    <Step title="Waiting" description="This is a description." />
-                  </Steps>
                   <br />
-                  <Steps current={currentStep} onChange={this.onStepsChange}>
-                    <Step title="Step 1" description="This is a description." />
-                    <Step title="Step 2" description="This is a description." />
-                    <Step title="Step 3" description="This is a description." />
-                  </Steps>
                 </div>
               </Col>
             </Row>

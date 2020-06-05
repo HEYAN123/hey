@@ -8,7 +8,6 @@ debug: true
 
 ```jsx
 import {
-  Typography,
   Button,
   Input,
   Select,
@@ -22,7 +21,6 @@ import {
   Mentions,
 } from 'hey-design';
 
-const { Text } = Typography;
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 const Option = Select.Option;
@@ -69,7 +67,6 @@ ReactDOM.render(
     <Input.TextArea rows={1} style={{ width: 100 }} />
     <Button type="primary">Button</Button>
     <Input style={{ width: 100 }} />
-    <Text copyable>Hey Design</Text>
     <Input prefix="1" suffix="2" style={{ width: 100 }} />
     <Input addonBefore="1" addonAfter="2" style={{ width: 100 }} />
     <InputNumber style={{ width: 100 }} />

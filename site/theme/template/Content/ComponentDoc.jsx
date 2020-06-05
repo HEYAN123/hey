@@ -197,7 +197,7 @@ class ComponentDoc extends React.Component {
         </section>
         <Row gutter={16}>
           <Col
-            span={24}
+            span={12}
             className="code-boxes-col-1-1"
           >
             {leftChildren}

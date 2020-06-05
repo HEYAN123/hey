@@ -1,7 +1,7 @@
 ---
 order: 0
 title:
-  zh-CN: 按钮样式
+  zh-CN: 正常和禁用状态按钮
   en-US: Type
 ---
 
@@ -25,6 +25,7 @@ ReactDOM.render(
     <Button onClick={handleClick}>默认</Button>
     <Button cus="part" className="mycls" onClick={handleClick}>part</Button>
     <Button cus="all" className="mycls-2" onClick={handleClick}>alllllllll</Button>
+    <Button status="disabled" className="mycls-3" onClick={handleClick}>禁用</Button>
   </div>,
   mountNode,
 );
@@ -44,5 +45,9 @@ ReactDOM.render(
   background: yellow;
   border: 1px solid blue;
   border-radius: 100px;
+}
+
+.mycls-3 {
+  margin-left: 15px;
 }
 ```
