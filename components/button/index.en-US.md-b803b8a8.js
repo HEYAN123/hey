@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{3042:function(n,e){n.exports={content:["article"],meta:{filename:"components/button/index.en-US.md"},toc:["ul"]}}}]);
