@@ -23,7 +23,14 @@ class Div extends React.Component<DivProps> {
       <Button className={s.retry}>点击重试</Button>
     </div>,
     // 默认的loading组件
-    loadingContent: <div className={s.loadingCon} />,
+    loadingContent:
+    <div className={s.loadingCon}>
+      <div className={s.loadingTip} />
+      <div className={s.loadingTip} />
+      <div className={s.loadingTip} />
+      <div className={s.loadingTip} />
+    </div>
+    ,
     status: '',
   };
 
@@ -41,14 +48,24 @@ class Div extends React.Component<DivProps> {
 
   // 内容渲染
   renderContent() {
-    const { status, loadingContent, failContent, children } = this.props;
+    const {
+      status,
+      handleLoad,
+      loadingContent,
+      failContent,
+      children,
+    } = this.props;
     switch (status) {
       case '':
         return children;
       case 'loading':
         return loadingContent;
       case 'fail':
-        return failContent;    
+        return failContent ? 
+        <div className={s.failCon}>
+          <Button className={s.retry} onClick={handleLoad}>点击重试</Button>
+        </div> :
+        null;    
       default:
         return null;
     }

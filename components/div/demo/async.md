@@ -24,6 +24,7 @@ class App extends React.Component {
     this.state = {
       flag1: '',
       flag2: '',
+      data: <p className="para">点击下面的按钮获取数据，你会看到获取成功的情况</p>,
     }
   }
 
@@ -35,6 +36,13 @@ class App extends React.Component {
     setTimeout(() => {
       this.setState({
         flag1: '',
+        data:
+        <div className="para">
+          <p>锄禾日当午</p>
+          <p>汗滴禾下土</p>
+          <p>谁知盘中餐</p>
+          <p>粒粒皆辛苦</p>
+        </div>,
       });
       console.log('request success!');
     }, 4000)
@@ -54,15 +62,15 @@ class App extends React.Component {
   }
 
   render() {
-    const { flag1, flag2 } = this.state;
+    const { flag1, flag2, data } = this.state;
     return (
       <Div>
         <Div className="mycls" status={flag2} handleLoad={this.handleClickFail}>
-          <p>点击下面的按钮获取数据，你会看到获取失败的情况</p>
+          <p className="para">点击下面的按钮获取数据，你会看到获取失败的情况</p>
           <Button onClick={this.handleClickFail}>获取数据</Button>
         </Div>
         <Div className="mycls" status={flag1}>
-          <p>点击下面的按钮获取数据，你会看到获取成功的情况</p>
+          {data}
           <Button onClick={this.handleClickSucc}>获取数据</Button>
         </Div>
       </Div>
@@ -83,5 +91,8 @@ ReactDOM.render(<App />, mountNode);
   overflow: hidden;
   border: 1px solid #369;
   border-radius: 5px;
+}
+.para {
+  padding: 16px;
 }
 ```

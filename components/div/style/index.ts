@@ -10,7 +10,7 @@ const styles = {
     margin: ${primary_margin};
   `,
   failCon: `
-    background-color: #ddd;
+    background-color: #f5f5f5;
     width: 100%;
     height: 100%;
     display: flex;
@@ -26,11 +26,16 @@ const styles = {
     },
   },
   loadingCon: {
+    background: '#fff',
+    width: '100%',
+    height: '100%',
+  },
+  loadingTip: {
     background: 'linear-gradient(90deg, #f5f5f5 25%, #eee 37%, #f5f5f5 63%)',
     backgroundSize: '400% 100%',
     animation: `$skeletonLoading 1.4s ease infinite`,
-    width: '100%',
-    height: '100%',
+    height: '20px',
+    margin: '16px',
   },
   retry: `
     opacity: 0.6;
